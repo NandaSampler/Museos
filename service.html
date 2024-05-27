@@ -26,77 +26,200 @@
     <link href="css/style.css" rel="stylesheet">
 
     <style>
-        * {
-            box-sizing: border-box;
-        }
+        @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:700');
 
-        body {
-            font-family: "Open Sans", sans-serif;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            justify-content: center;
-            align-items: center;
-            background: hsl(187 40% 98%);
-        }
+:root {
+  --font: 'Source Sans Pro', sans-serif;
+  --primary: #71b419;
+  --second: #644cad;
+  --third: #4426a8;
+}
 
-        img {
-            display: block;
-            width: 100%;
-        }
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-        h2 {
-            margin: 0;
-            font-size: 1.4rem;
-        }
+.flex {
+  min-height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-        @media (min-width: 50em) {
-            h2 {
-                font-size: 1.8rem;
-            }
-        }
+a.bttn {
+  color: var(--primary);
+  text-decoration: none;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s ease all;
+}
 
-        .cta {
-            --shadowColor: 187 60% 40%;
-            display: flex;
-            flex-wrap: wrap;
-            background: hsl(187 70% 85%);
-            max-width: 50rem;
-            width: 100%;
-            box-shadow: 0.65rem 0.65rem 0 hsl(var(--shadowColor) / 1);
-            border-radius: 0.8rem;
-            overflow: hidden;
-            border: 0.5rem solid;
-            margin-bottom: 2rem;
-        }
+a.bttn:hover, a.bttn:focus {
+  color: #FFF;
+}
 
-        .cta img {
-            aspect-ratio: 3 / 2;
-            object-fit: cover;
-            flex: 1 1 300px;
-            outline: 0.5rem solid;
-        }
+.bttn {
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  width: 270px;
+  font-weight: bold;
+  padding: 14px 0px;
+  border: 3px solid var(--primary);
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  background: none;
+  color: var(--primary);
+  cursor: pointer;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s ease all;
+}
 
-        .cta__text-column {
-            padding: min(2rem, 5vw) min(2rem, 5vw) min(2.5rem, 5vw);
-            flex: 1 0 50%;
-        }
+.bttn:before {
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  background-color: var(--primary);
+  z-index: -2;
+}
 
-        .cta__text-column > * + * {
-            margin: min(1.5rem, 2.5vw) 0 0 0;
-        }
+.bttn:hover:before, .bttn:focus:before {
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
 
-        .cta a {
-            display: inline-block;
-            color: black;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            background: hsl(187 75% 64%);
-            border-radius: 0.6rem;
-            font-weight: 700;
-            border: 0.35rem solid;
-        }
+.bttn:hover, .bttn:focus {
+  color: #FFF; /* Aquí se define el color de las letras en hover o focus */
+}
+
+#add-card-button {
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  width: 270px;
+  font-weight: bold;
+  padding: 14px 0px;
+  border: 3px solid var(--primary);
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  background: none;
+  color: var(--primary);
+  cursor: pointer;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s ease all;
+}
+
+#add-card-button:before {
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  background-color: var(--primary);
+  z-index: -2;
+}
+
+#add-card-button:hover:before, #add-card-button:focus:before {
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+#add-card-button:hover, #add-card-button:focus {
+  color: #FFF; /* Aquí se define el color de las letras en hover o focus */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  background: hsl(187 40% 98%);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+@media (min-width: 50em) {
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+.cta {
+  --shadowColor: 187 60% 40%;
+  display: flex;
+  flex-wrap: wrap;
+  background: hsl(187 70% 85%);
+  max-width: 50rem;
+  width: 100%;
+  box-shadow: 0.65rem 0.65rem 0 hsl(var(--shadowColor) / 1);
+  border-radius: 0.8rem;
+  overflow: hidden;
+  border: 0.5rem solid;
+  margin-bottom: 2rem;
+}
+
+.cta img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  flex: 1 1 300px;
+  outline: 0.5rem solid;
+}
+
+.cta__text-column {
+  padding: min(2rem, 5vw) min(2rem, 5vw) min(2.5rem, 5vw);
+  flex: 1 0 50%;
+}
+
+.cta__text-column > * + * {
+  margin: min(1.5rem, 2.5vw) 0 0 0;
+}
+
+.cta a {
+  display: inline-block;
+  color: black;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  background: hsl(187 75% 64%);
+  border-radius: 0.6rem;
+  font-weight: 700;
+  border: 0.35rem solid;
+}
     </style>
 </head>
 
@@ -192,7 +315,7 @@
 
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="package-item bg-white mb-2">
-                        <img class="img-fluid" src="img/metales.jpeg" height="225px" width="1024px">
+                        <img class="img-fluid" src="https://pbs.twimg.com/media/CnfqHL1XEAAXwPc.jpg" height="225px" width="1024px">
                         <div class="p-4">
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2" href="#">+</a></small>
@@ -309,6 +432,9 @@
             </div>
 
             <!-- New cards start here -->
+            <div class="flex">
+                <a id="add-card-button" class="bttn">Generar Ruta</a>
+              </div>
             <div class="text-center mb-3 pb-3">
                 <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Esta es tu Ruta!</h6>
                 <h1>Museos que quieres visitar</h1>
@@ -411,41 +537,119 @@
     <script src="js/main.js"></script>
 
     <script>
-        const cardsData = [
-            {
-                imgSrc: 'img/poli.jpeg',
-                imgAlt: 'Bluetit',
-                title: 'Primera parada: ',
-                description: 'Este museo es una mrd, no vayan.',
-                additionalDescription: 'Horario: 10:00 - 10:01.',
-                additionalDescription: 'Cuanto voy a tardar: .'
-            },
-            {
-                imgSrc: 'https://www.arqhys.com/construccion/fotos/construccion/Planos-de-ubicación.jpg',
-                imgAlt: 'Small blue-grey yellow-breasted bird',
-                title: 'Ubicacion de Museo',
-                description: 'Direccion: P. Sherman, calle Wallaby, 42, Sydney'
-            }
-        ];
+        const imagenes = ["img/litoral.jpg", "https://pbs.twimg.com/media/CnfqHL1XEAAXwPc.jpg", "img/casa.jpg", "img/teatro.jpg", "img/tribunal.jpg", "img/nacional.jpg", "img/naci.jpeg", "img/poli.jpeg", "img/conser.jpg", "img/footo.jpg"];
 
+        const lugares = ["Litoral", "Metales", "Murillo", "Teatro", "Tribunal", "Etno", "Arte", "Policial", "Musica", "Foto"];
+
+        const horarios = ["14:30-18:00", "15:00-18:00", "14:30-18:00", "17:00-22:00", "08:30-16:30", "14:30-18:30", "09:00-19:00", "14:30-18:30", "09:00-13:00", "14:30-18:30"];
+
+        const direcciones = ["Jaén 789, La Paz", "Jaén 777, La Paz", "Jaén 790, La Paz", "Indaburo, La Paz", "Potosi & Yanacocha, La Paz", "Ingavi 916, La Paz", 
+        "Socabaya, La Paz", "Colón entre Comercio y, Villa Imperial de Potosí", "Jaén 711, La Paz", "Calle Murillo 1387 entre Almirante, La Paz"];
+
+        const descriptions = ["El Museo Litoral Boliviano es un museo dedicado" +
+        "a la guerra del Pacífico, en la cual Bolivia perdió sus costas sobre el océano, y al héroe de esa guerra," + 
+        "el Coronel Eduardo Abaroa. El Museo fue fundado el 17 de julio de 1978 y es parte de la red municipal de museos de La Paz.​​​​",
+
+        "El Museo de Metales Preciosos Precolombinos se encuentra localizado" + 
+        "en la ciudad de La Paz, Bolivia. Este museo se inauguró en 1984.​Funciona en la calle Jaén," +
+        "en un inmueble histórico que es parte del patrimonio cultural boliviano, con categoría monumental.",
+
+        "El museo Casa de Murillo es una entidad cultural de la ciudad de La Paz en Bolivia, funciona en un inmueble catalogado "+
+        "como de valor monumental según la legislación sobre patrimonio cultural boliviano, "+
+        "la declaratoria de Monumento nacional corresponde a 1945. Posee igualmente una declaratoria de Patrimonio"+
+        "Arquitectónico de la ciudad de La Paz, extendida según ley Municipal Autonómica en 2012.1​",
+
+        "El Teatro Municipal «Alberto Saavedra Pérez»​ es el principal teatro de la ciudad de La Paz y "+
+        "escenario para la presentación de recitales y conciertos musicales, obras teatrales, ballet y opera, entre otros espectáculos culturales.",
+
+        "En fecha 15 de diciembre de 1825, el Libertador Simón Bolivar, promulgó el Decreto por "+
+        "el que se dispuso la creación de la Corte Superior de Justicia de La Paz, con las mismas atribuciones de las antiguas Audiencias "+
+        "y cuya jurisdicción territorial comprendia los departamentos de La Paz, Cochabamba e inclusive las provincias de Oruro, Paria y Carangas.",
+
+        "El Museo Nacional de Etnografía y Folklore (Musef) es uno de los principales centros de difusión de "+
+        "la etnografía de Bolivia. Los antecedentes previos a su fundación se remiten a la creación del Museo Nacional "+
+        "fundado en 1925, cuando nace el Departamento Científico de Etnografía como parte de los festejos del Centenario de Bolivia.",
+
+        "El Museo Nacional de Arte, Palacio Díez de Medina es un museo de la ciudad de La Paz, Bolivia. "+
+        "El mismo cuenta con una importante colección permanente de pintura colonial, lienzos de Melchor Pérez de Holguín, "+
+        "pintor del siglo XVII, y de Gregorio Gamarra, pintor peruano del siglo XVII.",
+
+        "El Museo Policial de Bolivia, fue fundado por el Cnl. Alberto Mariño Guzmán y Víctor Manuel del Castillo el año 1942, "+
+        "en los predios de la División de Criminalística ubicada en la calle Ballivián – actual Tribunal Permanente de "+
+        "Justicia Militar -. Siendo trasladado el Museo a una dependencia de la Prefectura del Departamento de La Paz , "+
+        "el año 1942, Posteriormente funcionó hasta año 1976 en el Regimiento La Paz, hoy Distrito Policial N. 1 de la zona de San Pedro de la ciudad de La Paz.",
+
+        "Pequeño museo en el que se exhibe una colección de instrumentos musicales de todo el mundo.",
+
+        "Exposición de cámaras antiguas y analógicas desde 1987, muestra fotográfica "+
+        "Bolivia de Luz de distintos lugares, demostración de fotografía nocturna experimental con participantes y asistentes."
+    ];
+        const matrizDistancias = [
+            [0, 12, 21, 270, 650, 400, 650, 900, 1700, 1300],
+            [12, 0, 9, 260, 650, 350, 600, 850, 1700, 1300],
+            [21, 9, 0, 250, 650, 350, 600, 850, 1700, 1400],
+            [270, 260, 250, 0, 350, 110, 350, 600, 1500, 1100],
+            [650, 650, 650, 350, 0, 260, 200, 450, 1100, 800],
+            [400, 350, 350, 110, 260, 0, 240, 500, 1300, 1000],
+            [650, 600, 600, 350, 200, 240, 0, 350, 1100, 750],
+            [900, 850, 850, 600, 450, 500, 350, 0, 850, 550],
+            [1700, 1700, 1700, 1500, 1100, 1300, 1100, 850, 0, 700],
+            [1300, 1300, 1400, 1100, 800, 1000, 750, 550, 700, 0]
+        ];
+        // Contador para las tarjetas creadas
+        let cardCount = 0;
+
+        // Obtén el contenedor dinámico de las tarjetas
         const dynamicCardsContainer = document.getElementById('dynamic-cards');
 
-        cardsData.forEach(card => {
-            const cardElement = document.createElement('div');
-            cardElement.className = 'col-lg-4 col-md-6 mb-4';
-            cardElement.innerHTML = `
+        // Función para crear una nueva tarjeta
+        function createCard() {
+            // Crear un contenedor para una nueva fila
+            const rowContainer = document.createElement('div');
+            rowContainer.className = 'row';
+
+            // Crear la primera tarjeta con título dinámico
+            const cardElement1 = document.createElement('div');
+            cardElement1.className = 'col-lg-6 col-md-12 mb-4';
+            cardElement1.innerHTML = `
                 <article class="cta">
-                    <img src='${card.imgSrc}' alt='${card.imgAlt}'>
+                    <img src='${imagenes[cardCount]}' alt='Bluetit'>
                     <div class="cta__text-column">
-                        <h2>${card.title}</h2>
-                        <p>${card.description}</p>
-                        ${card.additionalDescription ? `<p>${card.additionalDescription}</p>` : ''}
+                        <h2>${cardCount + 1}ª parada: ${lugares[cardCount]}</h2>
+                        <p>${descriptions[cardCount]}</p>
+                        <p>${"Distancia hacia el museo:" }</p>
                     </div>
                 </article>
             `;
-            dynamicCardsContainer.appendChild(cardElement);
-        });
-    </script>
+
+            // Crear la segunda tarjeta con el título "Dirección"
+            const cardElement2 = document.createElement('div');
+            cardElement2.className = 'col-lg-6 col-md-12 mb-4';
+            cardElement2.innerHTML = `
+                <article class="cta">
+                    <img src='https://www.arqhys.com/construccion/fotos/construccion/Planos-de-ubicación.jpg' alt='Small blue-grey yellow-breasted bird'>
+                    <div class="cta__text-column">
+                        <h2>Dirección y Horarios</h2>
+                        <p>${"Direccion: " + direcciones[cardCount]}</p>
+                        <p>${"Horarios: " + horarios[cardCount]}</p>
+                    </div>
+                </article>
+            `;
+
+            // Añadir las tarjetas al contenedor de la fila
+            rowContainer.appendChild(cardElement1);
+            rowContainer.appendChild(cardElement2);
+
+            // Añadir el contenedor de la fila al contenedor principal
+            dynamicCardsContainer.appendChild(rowContainer);
+
+            // Incrementar el contador de tarjetas
+            cardCount += 1;
+        }
+
+        // Añadir evento al botón
+        document.getElementById('add-card-button').addEventListener('click', createCard);
+    </script>   
 </body>
 
 </html>
