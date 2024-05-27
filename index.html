@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,6 +26,71 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* Dialog Styles */
+        dialog {
+            padding: 1rem 2rem;
+            background: rgb(255, 255, 255);
+            max-width: 600px;
+            padding-top: 1.5rem;
+            border-radius: 10px;
+            border: 0;
+            box-shadow: 0 5px 30px 0 rgb(0 0 0 / 10%);
+            animation: fadeIn 0.5s ease both;
+        }
+
+        dialog::backdrop {
+            animation: fadeIn 0.5s ease both;
+            background: rgb(255 255 255 / 40%);
+            z-index: 2;
+            backdrop-filter: blur(10px);
+        }
+
+        .x {
+            filter: grayscale(1);
+            border: none;
+            background: none;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            transition: ease filter, transform 0.3s;
+            cursor: pointer;
+            transform-origin: center;
+            font-size: 1.2rem;
+        }
+
+        .x:hover {
+            filter: grayscale(0);
+            transform: scale(1.1);
+        }
+
+        dialog h2 {
+            font-weight: 600;
+            font-size: 1.5rem;
+            padding-bottom: 0.5rem;
+        }
+
+        dialog p {
+            font-size: 1rem;
+            line-height: 1.5rem;
+            padding: 0.5rem 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+
+    
+
+
 </head>
 
 <body>
@@ -33,9 +100,9 @@
             <div class="row">
                 <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
                     <div class="d-inline-flex align-items-center">
-                        <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+                        <p><i class="fa fa-envelope mr-2"></i>lapaz.bo/culturas/museos</p>
                         <p class="text-body px-3">|</p>
-                        <p><i class="fa fa-phone-alt mr-2"></i>+012 345 6789</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>+512 2 2390969</p>
                     </div>
                 </div>
             </div>
@@ -43,13 +110,13 @@
     </div>
     <!-- Topbar End -->
 
-
+    
     <!-- Navbar Start -->
     <div class="container-fluid position-relative nav-bar p-0">
         <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
             <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
                 <a href="" class="navbar-brand">
-                    <h1 class="m-0 text-primary"><span class="text-dark">Larga noche <br> de museos</span></h1>
+                    <h1 class="m-0 text-primary"><span class="text-dark">Larga noche de</span> museos</h1>
                 </a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
@@ -57,20 +124,8 @@
                 <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
                     <div class="navbar-nav ml-auto py-0">
                         <a href="index.html" class="nav-item nav-link active">Inicio</a>
-                        <a href="about.html" class="nav-item nav-link">Acerca de nosotros</a>
-                        <a href="service.html" class="nav-item nav-link">Services</a>
-                        <a href="package.html" class="nav-item nav-link">Tour Packages</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu border-0 rounded-0 m-0">
-                                <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                                <a href="single.html" class="dropdown-item">Blog Detail</a>
-                                <a href="destination.html" class="dropdown-item">Destination</a>
-                                <a href="guide.html" class="dropdown-item">Travel Guides</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="about.html" class="nav-item nav-link">Problematica</a>
+                        <a href="service.html" class="nav-item nav-link">Museos</a>
                     </div>
                 </div>
             </nav>
@@ -88,7 +143,7 @@
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h4 class="text-white text-uppercase mb-md-3">“Tenemos más de 350 instituciones que se han registrado, entre embajadas, misiones internacionales de cooperación, galerías de arte, museos, teatros, centros culturales"</h4>
-                            <h1 class="display-3 text-white mb-md-4">Rodney Miranda</h1>
+                            <h1 class="display-3 text-white mb-md-4">Ciudad de La Paz</h1>
                         </div>
                     </div>
                 </div>
@@ -114,7 +169,7 @@
             <div class="row">
                 <div class="col-lg-6" style="min-height: 500px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100" src="img/rodney.webp" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100" src="img/illimani.jpg" style="object-fit: cover;">
                     </div>
                 </div>
                 <div class="col-lg-6 pt-5 pb-lg-5">
@@ -185,297 +240,283 @@
     <div class="container-fluid py-5">
         <div class="container pt-5 pb-3">
             <div class="text-center mb-3 pb-3">
-                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Destination</h6>
-                <h1>Explore Top Destination</h1>
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Museos disponibles</h6>
+                <h1>Zona Central</h1>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="destination-item position-relative overflow-hidden mb-2">
-                        <img class="img-fluid" src="img/destination-1.jpg" alt="">
-                        <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">United States</h5>
-                            <span>100 Cities</span>
+                    <div class="destination-item position-relative overflow-hidden mb-2" onclick="document.getElementById('dialog').showModal();">
+                        <img class="img-fluid" src="img/litoral.jpg" alt="Museo del Litoral Boliviano">
+                        <a class="destination-overlay text-white text-decoration-none" href="javascript:void(0);">
+                            <h5 class="text-white">Museo del Litoral Boliviano</h5>
                         </a>
                     </div>
                 </div>
+                <!-- Modal1 -->
+                <dialog id="dialog">
+                    <button onclick="document.getElementById('dialog').close();" aria-label="close" class="x">❌</button>
+                    <h2>MUSEO DEL LITORAL BOLIVIANO</h2>
+                    <p><i class="fa fa-map-marker-alt"></i> C. Apolinar Jaén No 789</p>
+                    <p><i class="fa fa-clock"></i> Hrs. 16:00 – 00:00</p>
+                    <p><strong>“Yo quiero un mar para Bolivia”:</strong> Video instalación recreando un ambiente marino, con proyección de imágenes y acompañamiento sonoro de gaviotas.</p>
+                    <p><strong>El papel de las mujeres en la Guerra con Chile-Enfermera Ignacia Zevallos:</strong> Representación de Ignacia Zevallos y su importancia en la Guerra con Chile. Ella hablará de otras mujeres también que ayudaron a atender a los soldados del ejército boliviano.</p>
+                    <p><strong>Demostración de arte en vivo:</strong> Participación de artistas plásticos con demostración en vivo.</p>
+                </dialog>
+
+
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="destination-item position-relative overflow-hidden mb-2">
-                        <img class="img-fluid" src="img/destination-2.jpg" alt="">
-                        <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">United Kingdom</h5>
-                            <span>100 Cities</span>
+                    <div class="destination-item position-relative overflow-hidden mb-2" onclick="document.getElementById('dialog2').showModal();">
+                        <img class="img-fluid" src="img/metalespreciosos.jpg" alt="">
+                        <a class="destination-overlay text-white text-decoration-none" href="javascript:void(0);">
+                            <h5 class="text-white">Museo de Metales Preciosos y Precolombinos</h5>
+                            
                         </a>
                     </div>
                 </div>
+                <!-- Modal2 -->
+                <dialog id="dialog2">
+                    <button onclick="document.getElementById('dialog2').close();" aria-label="close" class="x">❌</button>
+                    <h2>MUSEO DE METALES PRECIOSOS Y PRECOLOMBINOS</h2>
+                    <p><i class="fa fa-map-marker-alt"></i> C. Apolinar Jaén No 777</p>
+                    <p><i class="fa fa-clock"></i> Hrs. 16:00 – 00:00</p>
+                    <p><strong>Exposición de piezas arqueológicas prehispánicas:</strong> Se podrá apreciar cuatro salas con una muestra de piezas arqueológicas en cerámica, piezas líticas, textiles y metales preciosos, correspondientes a las culturas prehispánicas.</p>
+                    <p><strong>Carlos Ponce Sangines:</strong> El museo contará con la representación del arqueólogo Carlos Ponce Sangines en holograma invitando a conocer los tesoros arqueológicos encontrados en las excavaciones correspondientes a las culturas prehispánicas. Lugar: Primer patio</p>
+                    <p><strong>Una mirada por Tiwanaku:</strong> A lo largo de la visita por el museo, se tendrá una video instalación, remontando a los visitantes a las ruinas de Tiwanaku, apreciando la Puerta del Sol y varias cabezas clavas. Lugar: Segundo patio y pasillos</p>
+                </dialog>
+
+
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="destination-item position-relative overflow-hidden mb-2">
-                        <img class="img-fluid" src="img/destination-3.jpg" alt="">
-                        <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">Australia</h5>
-                            <span>100 Cities</span>
+                    <div class="destination-item position-relative overflow-hidden mb-2" onclick="document.getElementById('dialog3').showModal();">
+                        <img class="img-fluid" src="img/casa.jpg" alt="">
+                        <a class="destination-overlay text-white text-decoration-none" href="javascript:void(0);">
+                            <h5 class="text-white">Museo Casa de Murillo</h5>
+                            
                         </a>
                     </div>
                 </div>
+                <!-- Modal3 -->
+                <dialog id="dialog3">
+                    <button onclick="document.getElementById('dialog3').close();" aria-label="close" class="x">❌</button>
+                    <h2>MUSEO CASA DE MURILLO</h2>
+                    <p><i class="fa fa-map-marker-alt"></i> C. Apolinar Jaén No 790</p>
+                    <p><i class="fa fa-clock"></i> Hrs. 16:00 – 00:00</p>
+                    <p><strong>Exposición Permanente:</strong> Recorrido por las instalaciones de la casa del protomártir paceño, por su dormitorio, oratorio y despacho. Lugar: Planta alta</p>
+                    <p><strong>“Arte Colonial”:</strong> Exposición de muebles, pintura y objetos de la época.</p>
+                    <p><strong>Presentación de artistas de cuerda:</strong> En algunas salas del museo se contará con la presencia de artistas que interpretarán instrumentos de cuerda, para ambientar el espacio durante el recorrido.</p>
+                    <p><strong>Pedro Domingo Murillo:</strong> El museo contará con la representación del prócer Pedro Domingo Murillo en holograma, dando lectura a la Proclama de la Junta Tuitiva de 1809. Lugar: Patio principal</p>
+                </dialog>
+
+
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="destination-item position-relative overflow-hidden mb-2">
-                        <img class="img-fluid" src="img/destination-4.jpg" alt="">
-                        <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">India</h5>
-                            <span>100 Cities</span>
+                    <div class="destination-item position-relative overflow-hidden mb-2" onclick="document.getElementById('dialog4').showModal();">
+                        <img class="img-fluid" src="img/teatro.jpg" alt="">
+                        <a class="destination-overlay text-white text-decoration-none" href="javascript:void(0);">
+                            <h5 class="text-white">Teatro municipal "Alberto Saavedra Perez</h5>
+                            
                         </a>
                     </div>
                 </div>
+                <!-- Modal4 -->
+                <dialog id="dialog4">
+                    <button onclick="document.getElementById('dialog4').close();" aria-label="close" class="x">❌</button>
+                    <h2>TEATRO MUNICIPAL "ALBERTO SAAVEDRA PEREZ"</h2>
+                    <p><i class="fa fa-map-marker-alt"></i> C. Indaburo, esq. C. Genaro Sanjinés</p>
+                    <p><i class="fa fa-clock"></i> Hrs. 18:00 – 00:00</p>
+                    <p>Una noche especial donde se podrá conocer la imponente arquitectura de uno de los principales escenarios del país, se tendrá la presentación de la Orquesta Sinfónica de la Universidad Loyola, Ballet de Chelita Urquidi, presentación teatral y muestras en el Salón de Honor, escenario, y Teatro de cámara.</p>
+                </dialog>
+
+
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="destination-item position-relative overflow-hidden mb-2">
-                        <img class="img-fluid" src="img/destination-5.jpg" alt="">
-                        <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">South Africa</h5>
-                            <span>100 Cities</span>
+                    <div class="destination-item position-relative overflow-hidden mb-2" onclick="document.getElementById('dialog5').showModal();">
+                        <img class="img-fluid" src="img/tribunal.jpg" alt="">
+                        <a class="destination-overlay text-white text-decoration-none" href="javascript:void(0);">
+                            <h5 class="text-white">Tribunal departamental de justicia la paz</h5>
+                            
                         </a>
                     </div>
                 </div>
+                <!-- Modal5 -->
+                <dialog id="dialog5">
+                    <button onclick="document.getElementById('dialog5').close();" aria-label="close" class="x">❌</button>
+                    <h2>TRIBUNAL DEPARTAMENTAL DE JUSTICIA DE LA PAZ</h2>
+                    <p><i class="fa fa-map-marker-alt"></i> C. Potosí, esq. Yanacocha No 953</p>
+                    <p><i class="fa fa-clock"></i> Hrs. 17:00 – 00:00</p>
+                    <p><strong>Una noche de historia en el Palacio de Justicia:</strong> Recorrido por las instalaciones del Palacio de Justicia, patrimonio de la ciudad de La Paz, se dará una breve historia de la justicia en la paz.</p>
+                    
+                </dialog>
+
+
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="destination-item position-relative overflow-hidden mb-2">
-                        <img class="img-fluid" src="img/destination-6.jpg" alt="">
-                        <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">Indonesia</h5>
-                            <span>100 Cities</span>
+                    <div class="destination-item position-relative overflow-hidden mb-2" onclick="document.getElementById('dialog6').showModal();">
+                        <img class="img-fluid" src="img/nacional.jpg" alt="">
+                        <a class="destination-overlay text-white text-decoration-none" href="javascript:void(0);">
+                            
+                            <h5 class="text-white">Museo nacional de etnografía y folklore (musef)</h5>
+                            
                         </a>
                     </div>
                 </div>
+                <!-- Modal6 -->
+                <dialog id="dialog6">
+                    <button onclick="document.getElementById('dialog6').close();" aria-label="close" class="x">❌</button>
+                    <h2>MUSEO NACIONAL DE ETNOGRAFÍA Y FOLKLORE (MUSEF)</h2>
+                    <p><i class="fa fa-map-marker-alt"></i> C. Ingavi, esq. C. Genaro Sanjinés, N° 916</p>
+                    <p><i class="fa fa-clock"></i> Hrs. 17:00 – 00:00</p>
+                    <p><strong>Interacción educativa para niños en base a exposiciones permanentes:</strong> Actividad de retroalimentación con soportes lúdicos.</p>
+                    <p><strong>Exposición fotografía etnográficas de Erland Nordenskiöld:</strong> Producto de 5 viajes a principios del siglo XX, son las fotografías de la colección de Nordenskiöld del Museo de Gotemburgo custodiado por el MUSEF.</p>
+                    <p><strong>Exposición: “Tejiendo la Vida”, “Vistiendo memorias” y “Vistiendo la cabeza”:</strong> Serie de muestras en base a la cadena operatoria (obtención de la materia prima, su transformación y vida social), basado en el aspecto arqueológico, histórico y antropológico.</p>
+                    <p><strong>Exposición: “Máscaras. Los diversos rostros del alma”:</strong> Muestra de máscaras en base a espacios de origen tanto en tierras bajas y tierras altas de Bolivia.</p>
+                    <p><strong>Exposición: “Damián Ayma Zepita. El fotógrafo itinerante”:</strong> Muestra fotográfica de 50 años de trabajo en el área rural y con diferentes temáticas (minería, religiosidad, bailes, deportes, etc.).</p>
+                    <p><strong>Exposiciones: “Moldeando la vida” y “El poder de las plumas”:</strong> Serie de muestras en base a la cadena operatoria (obtención de la materia prima, su transformación y vida social) en el aspecto arqueológico, histórico y antropológico.</p>
+                    <p><strong>Exposición: “Numismática Boliviana”:</strong> Muestra realizada en base a la colección de monedas y billetes del Banco Central de Bolivia, como testimonio del desarrollo histórico.</p>
+                    <p><strong>Exposición: Sonoridades vivas y espacios musicales:</strong> Muestra destacando el papel del sonido, el aliento (samana) y su impacto en los instrumentos musicales.</p>
+                    <p><strong>Sesión continua de Videos MUSEF:</strong> Proyección de 10 videos del MUSEF.</p>
+                    <p><strong>Venta de publicaciones y souvenirs:</strong> Producción de investigaciones del MUSEF, producción infanto juvenil, videos, tejidos, cerámica, entre otros.</p>
+                </dialog>
+
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="destination-item position-relative overflow-hidden mb-2" onclick="document.getElementById('dialog7').showModal();">
+                        <img class="img-fluid" src="img/naci.jpeg" alt="">
+                        <a class="destination-overlay text-white text-decoration-none" href="javascript:void(0);">
+                            <h5 class="text-white">Museo nacional de arte (mna)</h5>
+                        </a>
+                    </div>
+                </div>
+                <!-- Modal7 -->
+                <dialog id="dialog7">
+                    <button onclick="document.getElementById('dialog7').close();" aria-label="close" class="x">❌</button>
+                    <h2>MUSEO NACIONAL DE ARTE (MNA)</h2>
+                    <p><i class="fa fa-map-marker-alt"></i> C. Comercio, esq. Socabaya No 485</p>
+                    <p><i class="fa fa-clock"></i> Hrs. 17:00 – 00:00</p>
+                    <p><strong>Exposición: Muestra Bienal “Creadoras: Mujeres Artistas en Bolivia”:</strong> Muestra que rinde homenaje a más de 100 mujeres artistas bolivianas, expresiones artísticas de las mujeres a lo largo de la historia y su contribución a la cultura nacional y que han dejado huella en el arte boliviano, así como otras que emergen con una perspectiva fresca y contemporánea.</p>
+                    <p><strong>Exposición: Muestra Temporal “El Niño Jesús y San Juanito jugando con la profecía del martirio”:</strong> Exposición constituida por cuadros con cientos de años que pertenecen al barroco andino, de los artistas Melchor Pérez de Holguín, Francisco López de Castro, y pintores anónimos de muy alta calidad técnica en el oficio de la representación figurativa con la escenificación apócrifa de la vida de dos niños – Jesús y San Juan Bautista, que se conocieron desde el vientre materno y cuyas vidas estuvieron marcadas por una narrativa preestablecida por el “mandato divino”.</p>
+                    <p><strong>Exposición: Muestra Temporal “Apus y Achachilas”:</strong> Muestra, en la que se puede apreciar obras de Cecilio Guzmán de Rojas, María Luisa Pacheco, Enrique Arnal, Inés Córdova y otros que recogieron, no solo los paisajes o la majestuosidad de nuestras cumbres sagradas, sino que lograron crear una armonía de colores, formas y texturas logrando un resultado eminentemente poético.</p>
+                    <p><strong>Exposición: Muestra Temporal “Mujer Peligro Mujer”:</strong> Esta muestra refleja la amenaza diaria a la que se enfrentan las mujeres que son víctimas de la violencia ejercida por la sociedad patriarcal, la propuesta museológica son fotografías intervenidas con inteligencia artificial.</p>
+                    <p><strong>Guía teatralizada:</strong> Las distintas salas de exposición del Museo Nacional de Arte estarán teatralizadas por el Elenco teatral, dirigido por Isabel del Granado.</p>
+                    <p><strong>Mapping, Danza y Música Urbana:</strong> El museo presentará un mapping sobre la “Historias del MNA”, tendrá danza con el elenco Arte Estudio y contará con la presentación de Música Urbana (Hip Hop y Rap).</p>
+                </dialog>
+
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="destination-item position-relative overflow-hidden mb-2" onclick="document.getElementById('dialog8').showModal();">
+                        <img class="img-fluid" src="img/poli.jpeg" alt="">
+                        <a class="destination-overlay text-white text-decoration-none" href="javascript:void(0);">
+                            <h5 class="text-white">Museo policial</h5>
+                            
+                            
+                        </a>
+                    </div>
+                </div>
+                <!-- Modal8 -->
+                <dialog id="dialog8">
+                    <button onclick="document.getElementById('dialog8').close();" aria-label="close" class="x">❌</button>
+                    <h2>MUSEO POLICIAL</h2>
+                    <p><i class="fa fa-map-marker-alt"></i> Plaza Obispo Bosque</p>
+                    <p><i class="fa fa-clock"></i> Hrs. 17:00 – 00:00</p>
+                    <p><strong>Exposiciones:</strong> Modus Operandi del siglo XX, Rostros y Rastros del Crimen, Identificaciones, Radio Patrullas, Narcotráfico, Guerra del Chaco, Unidad de Bomberos Antofagasta, Gorras Extranjeras y Nacionales, Fototeca y Sala Criminal.</p>
+                    <p><strong>Escenario:</strong> Presentación de grupos musicales y danzas.</p>
+                </dialog>
+
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="destination-item position-relative overflow-hidden mb-2" onclick="document.getElementById('dialog9').showModal();">
+                        <img class="img-fluid" src="img/conser.jpg" alt="">
+                        <a class="destination-overlay text-white text-decoration-none" href="javascript:void(0);">
+                            <h5 class="text-white">Conservatorio plurinacional de música</h5>
+                            
+                        </a>
+                    </div>
+                </div>
+                <!-- Modal9 -->
+                <dialog id="dialog9">
+                    <button onclick="document.getElementById('dialog9').close();" aria-label="close" class="x">❌</button>
+                    <h2>CONSERVATORIO PLURINACIONAL DE MÚSICA</h2>
+                    <p><i class="fa fa-map-marker-alt"></i> C. Reyes Ortiz N 56</p>
+                    <p><i class="fa fa-clock"></i> Hrs. 16:30 – 22:30</p>
+                    <p><strong>Juventud al piano:</strong> Presentación de 5 estudiantes de piano clásico y uno de piano moderno.</p>
+                    <p><strong>Hrs. 16:30 – 17:30</strong></p>
+                    <p><strong>Coro juvenil:</strong> Repertorio variado de obras históricas y actuales. A cargo de la Prof. Noemí Cazas.</p>
+                    <p><strong>Hrs. 17:30 – 18:00</strong></p>
+                    <p><strong>Banda sinfónica del conservatorio:</strong> Compilación de valses a cargo del Mtro. Jorge Aguilar y la banda sinfónica del conservatorio.</p>
+                    <p><strong>Hrs. 18:00 – 18:30</strong></p>
+                    <p><strong>Prebanda sinfónica del conservatorio:</strong> Música Programática e incidental.</p>
+                    <p><strong>Hrs. 18:30 – 19:00</strong></p>
+                    <p><strong>Aprendiendo a escuchar la música:</strong> Charla con escuchas guiadas a cargo del Prof. Andrés Guzmán. Introducción a la apreciación musical.</p>
+                    <p><strong>Hrs. 19:00 – 19:30</strong></p>
+                    <p><strong>Latinoamérica y España en seis cuerdas:</strong> Música latinoamericana y española a cargo de estudiantes de guitarra clásica.</p>
+                    <p><strong>Hrs. 19:30 – 20:30</strong></p>
+                    <p><strong>Vida y Obra de Charly García:</strong> Charla a cargo del Prof. Freddy Mendizabal.</p>
+                    <p><strong>Hrs. 20:30 – 21:00</strong></p>
+                    <p><strong>Orquesta juvenil de guitarras:</strong> La orquesta juvenil del COPLUMU presentará un breve y variado programa de música popular.</p>
+                    <p><strong>Hrs. 21:00 – 21:30</strong></p>
+                    <p><strong>Presentación didáctica:</strong> Percusión sinfónica a cargo de la Est. Paola Pineda.</p>
+                    <p><strong>Hrs. 21:30 – 22:00</strong></p>
+                    <p><strong>Octeto de Guitarras:</strong> A cargo de estudiantes de diversos niveles, tocando música nacional y latinoamericana.</p>
+                    <p><strong>Hrs. 22:00 – 22:30</strong></p>
+                </dialog>
+
+
+                <!-- 10 Sección -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="destination-item position-relative overflow-hidden mb-2" onclick="document.getElementById('dialog10').showModal();">
+                        <img class="img-fluid" src="img/fotoespacio.png" alt="Foto espacio Bolivia">
+                        <a class="destination-overlay text-white text-decoration-none" href="javascript:void(0);">
+                            <h5 class="text-white">Foto espacio Bolivia</h5>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Modal 10 -->
+                <dialog id="dialog10">
+                    <button onclick="document.getElementById('dialog10').close();" aria-label="close" class="x">❌</button>
+                    <h2>FOTO ESPACIO BOLIVIA</h2>
+                    <p><i class="fa fa-map-marker-alt"></i> C. Murillo esq. Colombia N° 1387</p>
+                    <p><i class="fa fa-clock"></i> Hrs. 18:00 – 22:30</p>
+                    <p><strong>Exposición de Cámaras Antiguas:</strong> Muestra de Cámaras Analógicas desde 1987</p>
+                    <p><strong>Muestra Fotográfica Bolivia de Luz:</strong> Muestra de Fotografías de distintos lugares de Bolivia a cargo de la comunidad Foto Espacio Bolivia</p>
+                    <p><strong>Demostración de Fotografía Nocturna Experimental:</strong> Demostración de Fotografía nocturna y larga exposición con los participantes y asistentes</p>
+                </dialog>
+
+                
+
             </div>
         </div>
     </div>
     <!-- Destination Start -->
 
 
-    <!-- Service Start -->
-    <div class="container-fluid py-5">
-        <div class="container pt-5 pb-3">
-            <div class="text-center mb-3 pb-3">
-                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Services</h6>
-                <h1>Tours & Travel Services</h1>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service-item bg-white text-center mb-2 py-5 px-4">
-                        <i class="fa fa-2x fa-route mx-auto mb-4"></i>
-                        <h5 class="mb-2">Travel Guide</h5>
-                        <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service-item bg-white text-center mb-2 py-5 px-4">
-                        <i class="fa fa-2x fa-ticket-alt mx-auto mb-4"></i>
-                        <h5 class="mb-2">Ticket Booking</h5>
-                        <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service-item bg-white text-center mb-2 py-5 px-4">
-                        <i class="fa fa-2x fa-hotel mx-auto mb-4"></i>
-                        <h5 class="mb-2">Hotel Booking</h5>
-                        <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Service End -->
-
-
     <!-- Packages Start -->
-    <div class="container-fluid py-5">
-        <div class="container pt-5 pb-3">
-            <div class="text-center mb-3 pb-3">
-                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Museos disponibles</h6>
-                <h1>Zona Norte</h1>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="package-item bg-white mb-2">
-                        <img class="img-fluid" src="img/litoral.jpg" alt="">
-                        <div class="p-4">
-                            <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2" href="#">+</a></small>
-                            </div>
-                            <a class="h5 text-decoration-none" href="">Museo del Litoral Boliviano</a>
-                            <p class="m-0">Exposiciones sobre la Guerra con Chile y el papel de las mujeres.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="package-item bg-white mb-2">
-                        <img class="img-fluid" src="img/metales.jpg" alt="">
-                        <div class="p-4">
-                            <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2" href="#">+</a></small>
-                            </div>
-                            <a class="h5 text-decoration-none" href="">Museo de Metales Preciosos y Precolombinos</a>
-                            <p class="m-0">Exposición de piezas arqueológicas prehispánicas.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="package-item bg-white mb-2">
-                        <img class="img-fluid" src="img/casa.jpg" alt="">
-                        <div class="p-4">
-                            <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2" href="#">+</a></small>
-                            </div>
-                            <a class="h5 text-decoration-none" href="">Museo Casa de Murillo</a>
-                            <p class="m-0">Recorrido por la casa de Pedro Domingo Murillo y exposición de arte colonial.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="package-item bg-white mb-2">
-                        <img class="img-fluid" src="img/teatro.jpg" alt="">
-                        <div class="p-4">
-                            <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2" href="#">+</a></small>
-                            </div>
-                            <a class="h5 text-decoration-none" href="">Teatro municipal "Alberto Saavedra Perez"</a>
-                            <p class="m-0">Una noche especial con la Orquesta Sinfónica de la Universidad Loyola, Ballet de Chelita Urquidi, teatro y muestras en diferentes espacios.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="package-item bg-white mb-2">
-                        <img class="img-fluid" src="img/tribunal.jpg" alt="">
-                        <div class="p-4">
-                            <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2" href="#">+</a></small>
-                            </div>
-                            <a class="h5 text-decoration-none" href="">Tribunal departamental de justicia la paz</a>
-                            <p class="m-0">Recorrido por el Palacio de Justicia con historia breve de la justicia en La Paz.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="package-item bg-white mb-2">
-                        <img class="img-fluid" src="img/nacional.jpg" alt="">
-                        <div class="p-4">
-                            <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2" href="#">+</a></small>
-                            </div>
-                            <a class="h5 text-decoration-none" href="">Museo nacional de etnografía y folklore (musef)</a>
-                            <p class="m-0">Interacción educativa para niños con exposiciones permanentes, actividades lúdicas de retroalimentación, exposiciones fotográficas, muestras de máscaras, numismática boliviana, sonoridades musicales y vídeos del MUSEF. También se venden publicaciones y souvenirs.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="package-item bg-white mb-2">
-                        <img class="img-fluid" src="img/naci.jpeg" alt="">
-                        <div class="p-4">
-                            <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2" href="#">+</a></small>
-                            </div>
-                            <a class="h5 text-decoration-none" href="">Museo nacional de arte (mna)</a>
-                            <p class="m-0">El Museo Nacional de Arte exhibe la Bienal 'Creadoras: Mujeres Artistas en Bolivia' y exposiciones temporales sobre arte barroco andino, paisajes sagrados y la problemática de la violencia hacia las mujeres, con actividades culturales como teatro, mapping y danza urbana.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="package-item bg-white mb-2">
-                        <img class="img-fluid" src="img/poli.jpeg" alt="">
-                        <div class="p-4">
-                            <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2" href="#">+</a></small>
-                            </div>
-                            <a class="h5 text-decoration-none" href="">Museo policial</a>
-                            <p class="m-0">Exposiciones sobre temas del siglo XX como crimen, identificación, narcotráfico, Guerra del Chaco, bomberos, gorras, fototeca y criminología, junto con presentaciones de música y danza en el escenario.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="package-item bg-white mb-2">
-                        <img class="img-fluid" src="img/conser.jpg" alt="">
-                        <div class="p-4">
-                            <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2" href="#">+</a></small>
-                            </div>
-                            <a class="h5 text-decoration-none" href="">Conservatorio plurinacional de música</a>
-                            <p class="m-0">Evento musical con piano, coro juvenil, banda sinfónica, música programática, charla sobre música, música en guitarra, charla sobre Charly García, orquesta de guitarras y percusión sinfónica.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="package-item bg-white mb-2">
-                        <img class="img-fluid" src="img/footo.jpg" alt="">
-                        <div class="p-4">
-                            <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2" href="#">+</a></small>
-                            </div>
-                            <a class="h5 text-decoration-none" href="">Foto espacio Bolivia</a>
-                            <p class="m-0">Exposición de cámaras antiguas y analógicas desde 1987, muestra fotográfica "Bolivia de Luz" de distintos lugares, demostración de fotografía nocturna experimental con participantes y asistentes.</p>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </div>
+    
     <!-- Packages End -->
 
-
     <!-- Registration Start -->
-    <div class="container-fluid bg-registration py-5" style="margin: 90px 0;">
-        <div class="container py-5">
-            <div class="row align-items-center">
-                <div class="col-lg-7 mb-5 mb-lg-0">
-                    <div class="mb-4">
-                        <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Mega Offer</h6>
-                        <h1 class="text-white"><span class="text-primary">30% OFF</span> For Honeymoon</h1>
-                    </div>
-                    <p class="text-white">Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos,
-                        ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est
-                        dolor</p>
-                    <ul class="list-inline text-white m-0">
-                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Labore eos amet dolor amet diam</li>
-                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Etsea et sit dolor amet ipsum</li>
-                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Diam dolor diam elitripsum vero.</li>
-                    </ul>
-                </div>
-                <div class="col-lg-5">
-                    <div class="card border-0">
-                        <div class="card-header bg-primary text-center p-4">
-                            <h1 class="text-white m-0">Sign Up Now</h1>
-                        </div>
-                        <div class="card-body rounded-bottom bg-white p-5">
-                            <form>
-                                <div class="form-group">
-                                    <input type="text" class="form-control p-4" placeholder="Your name" required="required" />
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control p-4" placeholder="Your email" required="required" />
-                                </div>
-                                <div class="form-group">
-                                    <select class="custom-select px-4" style="height: 47px;">
-                                        <option selected>Select a destination</option>
-                                        <option value="1">destination 1</option>
-                                        <option value="2">destination 1</option>
-                                        <option value="3">destination 1</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <button class="btn btn-primary btn-block py-3" type="submit">Sign Up Now</button>
-                                </div>
-                            </form>
+    <div class="container-fluid p-0">
+        <div id="header-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="img/museos.webp" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <div class="mb-4">
+                                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">¿Cómo funciona</h6>
+                                <h1 class="text-white"><span class="text-primary">la Noche</span> de Museos?</h1>
+                            </div>
+                            <p class="text-white">La Noche de Museos de la Ciudad de La Paz significa que unos 45 de los principales museos de la ciudad permanecen abiertos hasta tarde y ofrecen entradas gratuitas o con descuento.</p>
+                            <ul class="list-inline text-white m-0">
+                                <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Si tienes la suerte de estar aquí para este evento, se lleva a cabo durante la tarde-noche del último miércoles de cada mes.</li>
+                                <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>La programación incluye conciertos, proyecciones de películas, visitas guiadas y algunos talleres prácticos. Es una excelente manera de salir y ver algo completamente nuevo en donde seguramente recibirás una gran bienvenida, incluso si es tu primera vez allí.</li>
+                                <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Si bien los listados a continuación están sujetos a cambios de un mes a otro, la mayoría de los meses incluyen todos los siguientes establecimientos participantes. Recuerda, la programación está prevista para esa noche únicamente de 18 a 22 horas.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
+            <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+                <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                    <span class="carousel-control-prev-icon mb-n2"></span>
+                </div>
+            </a>
         </div>
     </div>
     <!-- Registration End -->
@@ -485,14 +526,14 @@
     <div class="container-fluid py-5">
         <div class="container pt-5 pb-3">
             <div class="text-center mb-3 pb-3">
-                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Guides</h6>
-                <h1>Our Travel Guides</h1>
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Desarrolladores</h6>
+                <h1>Creadores de la Pagina</h1>
             </div>
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
                     <div class="team-item bg-white mb-4">
                         <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/team-1.jpg" alt="">
+                            <img class="img-fluid w-100" src="img/Domdef.JPG" alt="">
                             <div class="team-social">
                                 <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
@@ -509,7 +550,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
                     <div class="team-item bg-white mb-4">
                         <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/team-2.jpg" alt="">
+                            <img class="img-fluid w-100" src="img/feeeeeeeeeeeer.jpg" alt="">
                             <div class="team-social">
                                 <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
@@ -526,7 +567,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
                     <div class="team-item bg-white mb-4">
                         <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/team-3.jpg" alt="">
+                            <img class="img-fluid w-100" src="img/dpdef.JPG" alt="">
                             <div class="team-social">
                                 <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
@@ -543,7 +584,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
                     <div class="team-item bg-white mb-4">
                         <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/team-4.jpg" alt="">
+                            <img class="img-fluid w-100" src="img/Matias.jpeg" alt="">
                             <div class="team-social">
                                 <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-facebook-f"></i></a>
@@ -567,44 +608,40 @@
     <div class="container-fluid py-5">
         <div class="container py-5">
             <div class="text-center mb-3 pb-3">
-                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Testimonial</h6>
-                <h1>What Say Our Clients</h1>
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Preguntas</h6>
+                <h1>Frecuentes</h1>
             </div>
             <div class="owl-carousel testimonial-carousel">
                 <div class="text-center pb-4">
-                    <img class="img-fluid mx-auto" src="img/testimonial-1.jpg" style="width: 100px; height: 100px;" >
+                    <img class="img-fluid mx-auto" src="img/ICOM.png" style="width: 100px; height: 100px;" >
                     <div class="testimonial-text bg-white p-4 mt-n5">
-                        <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
+                        <p class="mt-5">El ICOM o Consejo Internacional de Museos (International Council of Museums, por sus siglas en inglés) es una organización internacional no gubernamental creada en 1946, cuya finalidad es investigar, perpetuar, perennizar y transmitir a la sociedad el patrimonio cultural y natural mundial, tangible e intangible. 
                         </p>
-                        <h5 class="text-truncate">Client Name</h5>
-                        <span>Profession</span>
+                        <h5 class="text-truncate">¿Qué es el ICOM?</h5>
                     </div>
                 </div>
                 <div class="text-center">
-                    <img class="img-fluid mx-auto" src="img/testimonial-2.jpg" style="width: 100px; height: 100px;" >
+                    <img class="img-fluid mx-auto" src="img/cierre.png" style="width: 100px; height: 100px;" >
                     <div class="testimonial-text bg-white p-4 mt-n5">
-                        <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
+                        <p class="mt-5">El Gobierno Municipal cerrará más de 15 accesos al corazón de la ciudad para que los visitantes de la Larga Noche de los Museos puedan participar de las actividades culturales programadas para toda la jornada sabatina del 18 de mayo. Habrá cortes en las calles Ingavi, Ayacucho, Junín, Florida, Libertad, 24 de Septiembre, Beni, Arenales, Bolívar, Sucre, Ballivián, Chuquisaca, René Moreno, Independencia y Suárez de Figueroa. Por tanto, desde la tarde, los motorizados ya no podrán acceder por ninguna de estas vías hasta la plaza principal.
                         </p>
-                        <h5 class="text-truncate">Client Name</h5>
-                        <span>Profession</span>
+                        <h5 class="text-truncate">¿Habrá cierre de calles?</h5>
                     </div>
                 </div>
                 <div class="text-center">
-                    <img class="img-fluid mx-auto" src="img/testimonial-3.jpg" style="width: 100px; height: 100px;" >
+                    <img class="img-fluid mx-auto" src="img/servicios.png" style="width: 100px; height: 100px;" >
                     <div class="testimonial-text bg-white p-4 mt-n5">
-                        <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
+                        <p class="mt-5">El Gobierno Municipal, a través de las secretarías de Seguridad Ciudadana y Desarrollo Humano, junto a Espacio Público, Alumbrado Público, Emacruz, Defensoría y Tránsito y Transporte dispondrán de todos sus equipos técnicos para el 18 de mayo. Habrá ambulancia, bomberos y guardias municipales, entre otros servicios públicos.
                         </p>
-                        <h5 class="text-truncate">Client Name</h5>
-                        <span>Profession</span>
+                        <h5 class="text-truncate">¿Qué tipo de servicios habrá en la noche de museos?</h5>
                     </div>
                 </div>
                 <div class="text-center">
-                    <img class="img-fluid mx-auto" src="img/testimonial-4.jpg" style="width: 100px; height: 100px;" >
+                    <img class="img-fluid mx-auto" src="img/importancia.jpg" style="width: 100px; height: 100px;" >
                     <div class="testimonial-text bg-white p-4 mt-n5">
-                        <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
+                        <p class="mt-5">La Noche de los Museos o Larga Noche de los Museos es un evento cultural organizado en forma conjunta con varios museos e instituciones culturales. Durante el evento, los establecimientos se encuentran abiertos durante la tarde y parte de la noche. El evento busca acercar visitantes a las instituciones culturales.
                         </p>
-                        <h5 class="text-truncate">Client Name</h5>
-                        <span>Profession</span>
+                        <h5 class="text-truncate">¿Qué significa la Noche de los Museos?</h5>
                     </div>
                 </div>
             </div>
@@ -614,73 +651,7 @@
 
 
     <!-- Blog Start -->
-    <div class="container-fluid py-5">
-        <div class="container pt-5 pb-3">
-            <div class="text-center mb-3 pb-3">
-                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Our Blog</h6>
-                <h1>Latest From Our Blog</h1>
-            </div>
-            <div class="row pb-3">
-                <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                    <div class="blog-item">
-                        <div class="position-relative">
-                            <img class="img-fluid w-100" src="img/blog-1.jpg" alt="">
-                            <div class="blog-date">
-                                <h6 class="font-weight-bold mb-n1">01</h6>
-                                <small class="text-white text-uppercase">Jan</small>
-                            </div>
-                        </div>
-                        <div class="bg-white p-4">
-                            <div class="d-flex mb-2">
-                                <a class="text-primary text-uppercase text-decoration-none" href="">Admin</a>
-                                <span class="text-primary px-2">|</span>
-                                <a class="text-primary text-uppercase text-decoration-none" href="">Tours & Travel</a>
-                            </div>
-                            <a class="h5 m-0 text-decoration-none" href="">Dolor justo sea kasd lorem clita justo diam amet</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                    <div class="blog-item">
-                        <div class="position-relative">
-                            <img class="img-fluid w-100" src="img/blog-2.jpg" alt="">
-                            <div class="blog-date">
-                                <h6 class="font-weight-bold mb-n1">01</h6>
-                                <small class="text-white text-uppercase">Jan</small>
-                            </div>
-                        </div>
-                        <div class="bg-white p-4">
-                            <div class="d-flex mb-2">
-                                <a class="text-primary text-uppercase text-decoration-none" href="">Admin</a>
-                                <span class="text-primary px-2">|</span>
-                                <a class="text-primary text-uppercase text-decoration-none" href="">Tours & Travel</a>
-                            </div>
-                            <a class="h5 m-0 text-decoration-none" href="">Dolor justo sea kasd lorem clita justo diam amet</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 pb-2">
-                    <div class="blog-item">
-                        <div class="position-relative">
-                            <img class="img-fluid w-100" src="img/blog-3.jpg" alt="">
-                            <div class="blog-date">
-                                <h6 class="font-weight-bold mb-n1">01</h6>
-                                <small class="text-white text-uppercase">Jan</small>
-                            </div>
-                        </div>
-                        <div class="bg-white p-4">
-                            <div class="d-flex mb-2">
-                                <a class="text-primary text-uppercase text-decoration-none" href="">Admin</a>
-                                <span class="text-primary px-2">|</span>
-                                <a class="text-primary text-uppercase text-decoration-none" href="">Tours & Travel</a>
-                            </div>
-                            <a class="h5 m-0 text-decoration-none" href="">Dolor justo sea kasd lorem clita justo diam amet</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <!-- Blog End -->
 
 
@@ -692,7 +663,7 @@
                     <h1 class="text-primary"><span class="text-white">Larga noche <br>de museos</span></h1>
                 </a>
                 <p>Tu sitio confiable donde puedes organizar la noche mas hermosa de tu vida.</p>
-                <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Follow Us</h6>
+                <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Siguenos</h6>
                 <div class="d-flex justify-content-start">
                     <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -701,57 +672,51 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
-                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Our Services</h5>
+                
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Destination</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Services</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Packages</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Guides</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Testimonial</a>
-                    <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Blog</a>
+                    <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Dominic Escalante</h5>
+                    
+                    <p><i class="fa fa-phone-alt mr-2"></i>+591 77217734</p>
+                    <p><i class="fa fa-envelope mr-2"></i>dominic.escalante@ucb.edu.bo</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
-                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Usefull Links</h5>
-                <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Destination</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Services</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Packages</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Guides</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Testimonial</a>
-                    <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Blog</a>
-                </div>
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Fernanda Mattos</h5>
+                
+                <p><i class="fa fa-phone-alt mr-2"></i>+591 77707560</p>
+                <p><i class="fa fa-envelope mr-2"></i>fernanda.mattos@ucb.edu.bo</p>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
-                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contact Us</h5>
-                <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
-                <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
-                <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
-                <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Newsletter</h6>
-                <div class="w-100">
-                    <div class="input-group">
-                        <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Your Email">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary px-3">Sign Up</button>
-                        </div>
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Jared Pimentel</h5>
+                
+                <p><i class="fa fa-phone-alt mr-2"></i>+512 76295137</p>
+                <p><i class="fa fa-envelope mr-2"></i>jared.pimentel@ucb.edu.bo</p>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Mateo Valenzuela</h5>
+                
+                <p><i class="fa fa-phone-alt mr-2"></i>+591 7056171390</p>
+                <p><i class="fa fa-envelope mr-2"></i>mateo.valenzuela@ucb.edu.bo</p>
+            </div>
+
+            <div class="col-lg-6 col-xl-3">
+                <div class="footer-item-1">
+                    <h4 class="mb-4 text-white">Universidad Catolica Boliviana "San Pablo"</h4>
+                    <p class="text-secondary line-h">Address: <span class="text-white">Av. 14 de Septiembre Nº 4807 esquina, La Paz</span></p>
+                    <p class="text-secondary line-h">Email: <span class="text-white">Example@ucb.edu.bo</span></p>
+                    <p class="text-secondary line-h">Telefono: <span class="text-white">+591 2 2782222</span></p>
+                    <div class="d-flex line-h">
+                        <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
+
+
         </div>
-    </div>
-    <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
-        <div class="row">
-            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-                <p class="m-0 text-white-50">Copyright &copy; <a href="#">Domain</a>. All Rights Reserved.</a>
-                </p>
-            </div>
-            <div class="col-lg-6 text-center text-md-right">
-                <p class="m-0 text-white-50">Designed by <a href="https://htmlcodex.com">HTML Codex</a>
-                </p>
-            </div>
-        </div>
+        
     </div>
     <!-- Footer End -->
 
@@ -775,6 +740,14 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <div id="textModal" class="modal">
+        <div class="modal-content">
+            <span class="closeBtn">&times;</span>
+            <textarea id="modalInput" rows="4" cols="50" placeholder="Ingrese su texto aquí..."></textarea>
+            <button id="saveBtn">Guardar</button>
+        </div>
+    </div>
 </body>
 
 </html>
