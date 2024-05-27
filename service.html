@@ -24,6 +24,80 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Open Sans", sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+            background: hsl(187 40% 98%);
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 1.4rem;
+        }
+
+        @media (min-width: 50em) {
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        .cta {
+            --shadowColor: 187 60% 40%;
+            display: flex;
+            flex-wrap: wrap;
+            background: hsl(187 70% 85%);
+            max-width: 50rem;
+            width: 100%;
+            box-shadow: 0.65rem 0.65rem 0 hsl(var(--shadowColor) / 1);
+            border-radius: 0.8rem;
+            overflow: hidden;
+            border: 0.5rem solid;
+            margin-bottom: 2rem;
+        }
+
+        .cta img {
+            aspect-ratio: 3 / 2;
+            object-fit: cover;
+            flex: 1 1 300px;
+            outline: 0.5rem solid;
+        }
+
+        .cta__text-column {
+            padding: min(2rem, 5vw) min(2rem, 5vw) min(2.5rem, 5vw);
+            flex: 1 0 50%;
+        }
+
+        .cta__text-column > * + * {
+            margin: min(1.5rem, 2.5vw) 0 0 0;
+        }
+
+        .cta a {
+            display: inline-block;
+            color: black;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            background: hsl(187 75% 64%);
+            border-radius: 0.6rem;
+            font-weight: 700;
+            border: 0.35rem solid;
+        }
+    </style>
 </head>
 
 <body>
@@ -90,7 +164,11 @@
     <div class="container-fluid page-header">
         <div class="container">
             <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 500px">
+<<<<<<< HEAD
                 <h3 class="display-4 text-white text-uppercase">Genera tu propia ruta!</h3>
+=======
+                <h3 class="display-4 text-white text-uppercase">Services</h3>
+>>>>>>> e032f0732bd0e0ecfbb042e42741c4629537a4ee
             </div>
         </div>
     </div>
@@ -178,6 +256,61 @@
                             <a class="h5 text-decoration-none" href="">Museo nacional de etnografía y folklore (musef)</a>
                             <p class="m-0">Interacción educativa para niños con exposiciones permanentes, actividades lúdicas de retroalimentación, exposiciones fotográficas, muestras de máscaras, numismática boliviana, sonoridades musicales y vídeos del MUSEF. También se venden publicaciones y souvenirs.</p>
                         </div>
+<<<<<<< HEAD
+=======
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid" src="img/naci.jpeg" width="1024px">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2" href="#">+</a></small>
+                            </div>
+                            <a class="h5 text-decoration-none" href="">Museo nacional de arte (mna)</a>
+                            <p class="m-0">El Museo Nacional de Arte exhibe la Bienal 'Creadoras: Mujeres Artistas en Bolivia' y exposiciones temporales sobre arte barroco andino, paisajes sagrados y la problemática de la violencia hacia las mujeres, con actividades culturales como teatro, mapping y danza urbana.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid" src="img/poli.jpeg" alt="">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2" href="#">+</a></small>
+                            </div>
+                            <a class="h5 text-decoration-none" href="">Museo policial</a>
+                            <p class="m-0">Exposiciones sobre temas del siglo XX como crimen, identificación, narcotráfico, Guerra del Chaco, bomberos, gorras, fototeca y criminología, junto con presentaciones de música y danza en el escenario.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid" src="img/conser.jpg" width="1024px">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2" href="#">+</a></small>
+                            </div>
+                            <a class="h5 text-decoration-none" href="">Conservatorio plurinacional de música</a>
+                            <p class="m-0">Evento musical con piano, coro juvenil, banda sinfónica, música programática, charla sobre música, música en guitarra, charla sobre Charly García, orquesta de guitarras y percusión sinfónica.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid" src="img/footo.jpg" width="1024px">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2" href="#">+</a></small>
+                            </div>
+                            <a class="h5 text-decoration-none" href="">Foto espacio Bolivia</a>
+                            <p class="m-0">Exposición de cámaras antiguas y analógicas desde 1987, muestra fotográfica "Bolivia de Luz" de distintos lugares, demostración de fotografía nocturna experimental con participantes y asistentes.</p>
+                        </div>
+>>>>>>> e032f0732bd0e0ecfbb042e42741c4629537a4ee
                     </div>
                 </div>
 
@@ -235,6 +368,17 @@
 
 
             </div>
+<<<<<<< HEAD
+=======
+
+            <!-- New cards start here -->
+            <div class="text-center mb-3 pb-3">
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Esta es tu Ruta!</h6>
+                <h1>Museos que quieres visitar</h1>
+            </div>
+            <div class="row justify-content-center" id="dynamic-cards"></div>
+            <!-- New cards end here -->
+>>>>>>> e032f0732bd0e0ecfbb042e42741c4629537a4ee
         </div>
     </div>
 
@@ -329,6 +473,43 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+        const cardsData = [
+            {
+                imgSrc: 'img/poli.jpeg',
+                imgAlt: 'Bluetit',
+                title: 'Primera parada: ',
+                description: 'Este museo es una mrd, no vayan.',
+                additionalDescription: 'Horario: 10:00 - 10:01.',
+                additionalDescription: 'Cuanto voy a tardar: .'
+            },
+            {
+                imgSrc: 'https://www.arqhys.com/construccion/fotos/construccion/Planos-de-ubicación.jpg',
+                imgAlt: 'Small blue-grey yellow-breasted bird',
+                title: 'Ubicacion de Museo',
+                description: 'Direccion: P. Sherman, calle Wallaby, 42, Sydney'
+            }
+        ];
+
+        const dynamicCardsContainer = document.getElementById('dynamic-cards');
+
+        cardsData.forEach(card => {
+            const cardElement = document.createElement('div');
+            cardElement.className = 'col-lg-4 col-md-6 mb-4';
+            cardElement.innerHTML = `
+                <article class="cta">
+                    <img src='${card.imgSrc}' alt='${card.imgAlt}'>
+                    <div class="cta__text-column">
+                        <h2>${card.title}</h2>
+                        <p>${card.description}</p>
+                        ${card.additionalDescription ? `<p>${card.additionalDescription}</p>` : ''}
+                    </div>
+                </article>
+            `;
+            dynamicCardsContainer.appendChild(cardElement);
+        });
+    </script>
 </body>
 
 </html>
