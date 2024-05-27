@@ -353,62 +353,153 @@
     <script src="js/main.js"></script>
     <script>
          document.addEventListener("DOMContentLoaded", function() {
-            var buttons = document.querySelectorAll(".toggle-btn");
-            var selectedMuseos = [];
-            
-            buttons.forEach(function(button) {
-                button.addEventListener("click", function(event) {
-                    event.preventDefault();
-                    var link = button.closest(".package-item").querySelector("a.h5");
-                    var value = link.getAttribute("value");
+    var buttons = document.querySelectorAll(".toggle-btn");
+    var selectedMuseos = [];
+    
+    buttons.forEach(function(button) {
+        button.addEventListener("click", function(event) {
+            event.preventDefault();
+            var link = button.closest(".package-item").querySelector("a.h5");
+            var value = link.getAttribute("value");
 
-                    if (button.classList.contains("btn-active")) {
-                        button.classList.remove("btn-active");
-                        button.innerHTML = "+";
-                        // Remove the value from the array
-                        var index = selectedMuseos.indexOf(value);
-                        if (index > -1) {
-                            selectedMuseos.splice(index, 1);
-                        }
-                    } else {
-                        button.classList.add("btn-active");
-                        button.innerHTML = "-";
-                        // Add the value to the array
-                        selectedMuseos.push(value);
-                    }
-                    
-                    console.log(selectedMuseos); // Log the array to see the changes
-                });
+            if (button.classList.contains("btn-active")) {
+                button.classList.remove("btn-active");
+                button.innerHTML = "+";
+                // Remove the value from the array
+                var index = selectedMuseos.indexOf(value);
+                if (index > -1) {
+                    selectedMuseos.splice(index, 1);
+                }
+            } else {
+                button.classList.add("btn-active");
+                button.innerHTML = "-";
+                // Add the value to the array
+                selectedMuseos.push(value);
+            }
+            
+            console.log(selectedMuseos); // Log the array to see the changes
+        });
+    });
+
+    document.getElementById("generate-route").addEventListener("click", function() {
+        const lugares = ["Litoral", "Metales", "Murillo", "Teatro", "Tribunal", "Etno", "Arte", "Policial", "Musica", "Foto"];
+        const matrizDistancias = [
+            [0, 12, 21, 270, 650, 400, 650, 900, 1700, 1300],
+            [12, 0, 9, 260, 650, 350, 600, 850, 1700, 1300],
+            [21, 9, 0, 250, 650, 350, 600, 850, 1700, 1400],
+            [270, 260, 250, 0, 350, 110, 350, 600, 1500, 1100],
+            [650, 650, 650, 350, 0, 260, 200, 450, 1100, 800],
+            [400, 350, 350, 110, 260, 0, 240, 500, 1300, 1000],
+            [650, 600, 600, 350, 200, 240, 0, 350, 1100, 750],
+            [900, 850, 850, 600, 450, 500, 350, 0, 850, 550],
+            [1700, 1700, 1700, 1500, 1100, 1300, 1100, 850, 0, 700],
+            [1300, 1300, 1400, 1100, 800, 1000, 750, 550, 700, 0]
+        ];
+        
+        let edges = [];
+        for (let i = 0; i < selectedMuseos.length; i++) {
+            for (let j = i + 1; j < selectedMuseos.length; j++) {
+                let idx1 = lugares.indexOf(selectedMuseos[i]);
+                let idx2 = lugares.indexOf(selectedMuseos[j]);
+                if (idx1 > -1 && idx2 > -1) {
+                    edges.push({
+                        source: selectedMuseos[i],
+                        target: selectedMuseos[j],
+                        weight: matrizDistancias[idx1][idx2]
+                    });
+                }
+            }
+        }
+
+        function find(parent, i) {
+            if (parent[i] === i) return i;
+            return find(parent, parent[i]);
+        }
+
+        function union(parent, rank, x, y) {
+            let rootX = find(parent, x);
+            let rootY = find(parent, y);
+
+            if (rank[rootX] < rank[rootY]) {
+                parent[rootX] = rootY;
+            } else if (rank[rootX] > rank[rootY]) {
+                parent[rootY] = rootX;
+            } else {
+                parent[rootY] = rootX;
+                rank[rootX]++;
+            }
+        }
+
+        function kruskal(edges) {
+            let parent = {};
+            let rank = {};
+            let mst = [];
+
+            selectedMuseos.forEach(v => {
+                parent[v] = v;
+                rank[v] = 0;
             });
 
-            document.getElementById("generate-route").addEventListener("click", function() {
-                const lugares = ["Litoral", "Metales", "Murillo", "Teatro", "Tribunal", "Etno", "Arte", "Policial", "Musica", "Foto"];
-                const matrizDistancias = [
-                    [0, 12, 21, 270, 650, 400, 650, 900, 1700, 1300],
-                    [12, 0, 9, 260, 650, 350, 600, 850, 1700, 1300],
-                    [21, 9, 0, 250, 650, 350, 600, 850, 1700, 1400],
-                    [270, 260, 250, 0, 350, 110, 350, 600, 1500, 1100],
-                    [650, 650, 650, 350, 0, 260, 200, 450, 1100, 800],
-                    [400, 350, 350, 110, 260, 0, 240, 500, 1300, 1000],
-                    [650, 600, 600, 350, 200, 240, 0, 350, 1100, 750],
-                    [900, 850, 850, 600, 450, 500, 350, 0, 850, 550],
-                    [1700, 1700, 1700, 1500, 1100, 1300, 1100, 850, 0, 700],
-                    [1300, 1300, 1400, 1100, 800, 1000, 750, 550, 700, 0]
-                ];
-                
-                let distancias = [];
-                for (let i = 0; i < selectedMuseos.length; i++) {
-                    for (let j = i + 1; j < selectedMuseos.length; j++) {
-                        let idx1 = lugares.indexOf(selectedMuseos[i]);
-                        let idx2 = lugares.indexOf(selectedMuseos[j]);
-                        if (idx1 > -1 && idx2 > -1) {
-                            distancias.push(matrizDistancias[idx1][idx2]);
-                        }
+            edges.sort((a, b) => a.weight - b.weight);
+
+            edges.forEach(edge => {
+                let {source, target, weight} = edge;
+                let rootSource = find(parent, source);
+                let rootTarget = find(parent, target);
+
+                if (rootSource !== rootTarget) {
+                    mst.push(edge);
+                    union(parent, rank, rootSource, rootTarget);
+                }
+            });
+
+            return mst;
+        }
+
+        let mst = kruskal(edges);
+
+        // Find Hamiltonian Path from MST
+        function findHamiltonianPath(mst) {
+            let adjList = {};
+            selectedMuseos.forEach(v => adjList[v] = []);
+            mst.forEach(edge => {
+                adjList[edge.source].push(edge.target);
+                adjList[edge.target].push(edge.source);
+            });
+
+            let startNode = selectedMuseos[0];
+            let visited = new Set();
+            let path = [];
+
+            function dfs(node) {
+                visited.add(node);
+                path.push(node);
+
+                for (let neighbor of adjList[node]) {
+                    if (!visited.has(neighbor)) {
+                        dfs(neighbor);
                     }
                 }
-                console.log(distancias); // Log the distances to see the output
-            });
-        });
+            }
+
+            dfs(startNode);
+            return path;
+        }
+
+        let hamiltonianPath = findHamiltonianPath(mst);
+        let totalWeight = 0;
+
+        for (let i = 0; i < hamiltonianPath.length - 1; i++) {
+            let idx1 = lugares.indexOf(hamiltonianPath[i]);
+            let idx2 = lugares.indexOf(hamiltonianPath[i + 1]);
+            totalWeight += matrizDistancias[idx1][idx2];
+        }
+
+        console.log("Suma de pesos total:", totalWeight);
+        console.log("Recorrido:", hamiltonianPath.join(" -> "));
+    });
+});
+
     </script>
 </body>
 </html>
