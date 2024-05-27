@@ -29,6 +29,12 @@
             background-color: rgba(122,183,48,255);
             color: white;
         }
+        .btn-small {
+            padding: 10px;
+            font-size: 24px;
+            line-height: 1.5;
+            border-radius: 5px;
+        }
     </style>
 </head>
 
@@ -116,7 +122,7 @@
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2 toggle-btn">+</a></small>
                             </div>
-                            <a class="h5 text-decoration-none" href="">Museo del Litoral Boliviano</a>
+                            <a class="h5 text-decoration-none" value="Litoral">Museo del Litoral Boliviano</a>
                             <p class="m-0">Exposiciones sobre la Guerra con Chile y el papel de las mujeres.</p>
                         </div>
                     </div>
@@ -129,7 +135,7 @@
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2 toggle-btn">+</a></small>
                             </div>
-                            <a class="h5 text-decoration-none" href="">Museo de Metales Preciosos y Precolombinos</a>
+                            <a class="h5 text-decoration-none" value="Metales">Museo de Metales Preciosos y Precolombinos</a>
                             <p class="m-0">Exposición de piezas arqueológicas prehispánicas.</p>
                         </div>
                     </div>
@@ -142,7 +148,7 @@
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2 toggle-btn">+</a></small>
                             </div>
-                            <a class="h5 text-decoration-none" href="">Museo Casa de Murillo</a>
+                            <a class="h5 text-decoration-none" value="Murillo">Museo Casa de Murillo</a>
                             <p class="m-0">Recorrido por la casa de Pedro Domingo Murillo y exposición de arte colonial.</p>
                         </div>
                     </div>
@@ -155,7 +161,7 @@
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2 toggle-btn">+</a></small>
                             </div>
-                            <a class="h5 text-decoration-none" href="">Teatro municipal "Alberto Saavedra Perez"</a>
+                            <a class="h5 text-decoration-none" value="Teatro">Teatro municipal "Alberto Saavedra Perez"</a>
                             <p class="m-0">Una noche especial con la Orquesta Sinfónica de la Universidad Loyola, Ballet de Chelita Urquidi, teatro y muestras en diferentes espacios.</p>
                         </div>
                     </div>
@@ -168,7 +174,7 @@
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2 toggle-btn">+</a></small>
                             </div>
-                            <a class="h5 text-decoration-none" href="">Tribunal departamental de justicia la paz</a>
+                            <a class="h5 text-decoration-none" value="Tribunal">Tribunal departamental de justicia la paz</a>
                             <p class="m-0">Recorrido por el Palacio de Justicia con historia breve de la justicia en La Paz.</p>
                         </div>
                     </div>
@@ -181,7 +187,7 @@
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2 toggle-btn">+</a></small>
                             </div>
-                            <a class="h5 text-decoration-none" href="">Museo nacional de etnografía y folklore (musef)</a>
+                            <a class="h5 text-decoration-none" value="Etno">Museo nacional de etnografía y folklore (musef)</a>
                             <p class="m-0">Interacción educativa para niños con exposiciones permanentes, actividades lúdicas de retroalimentación, exposiciones fotográficas, muestras de máscaras, numismática boliviana, sonoridades musicales y vídeos del MUSEF. También se venden publicaciones y souvenirs.</p>
                         </div>
                     </div>
@@ -194,7 +200,7 @@
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2 toggle-btn">+</a></small>
                             </div>
-                            <a class="h5 text-decoration-none" href="">Museo nacional de arte (mna)</a>
+                            <a class="h5 text-decoration-none" value="Arte">Museo nacional de arte (mna)</a>
                             <p class="m-0">El Museo Nacional de Arte exhibe la Bienal 'Creadoras: Mujeres Artistas en Bolivia' y exposiciones temporales sobre arte barroco andino, paisajes sagrados y la problemática de la violencia hacia las mujeres, con actividades culturales como teatro, mapping y danza urbana.</p>
                         </div>
                     </div>
@@ -207,7 +213,7 @@
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2 toggle-btn">+</a></small>
                             </div>
-                            <a class="h5 text-decoration-none" href="">Museo policial</a>
+                            <a class="h5 text-decoration-none" value="Policial">Museo policial</a>
                             <p class="m-0">Exposiciones sobre temas del siglo XX como crimen, identificación, narcotráfico, Guerra del Chaco, bomberos, gorras, fototeca y criminología, junto con presentaciones de música y danza en el escenario.</p>
                         </div>
                     </div>
@@ -220,7 +226,7 @@
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2 toggle-btn">+</a></small>
                             </div>
-                            <a class="h5 text-decoration-none" href="">Conservatorio plurinacional de música</a>
+                            <a class="h5 text-decoration-none" value="Musica">Conservatorio plurinacional de música</a>
                             <p class="m-0">Evento musical con piano, coro juvenil, banda sinfónica, música programática, charla sobre música, música en guitarra, charla sobre Charly García, orquesta de guitarras y percusión sinfónica.</p>
                         </div>
                     </div>
@@ -233,13 +239,23 @@
                             <div class="d-flex justify-content-between mb-3">
                                 <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2 toggle-btn">+</a></small>
                             </div>
-                            <a class="h5 text-decoration-none" href="">Foto espacio Bolivia</a>
+                            <a class="h5 text-decoration-none" value="Foto">Foto espacio Bolivia</a>
                             <p class="m-0">Exposición de cámaras antiguas y analógicas desde 1987, muestra fotográfica "Bolivia de Luz" de distintos lugares, demostración de fotografía nocturna experimental con participantes y asistentes.</p>
                         </div>
                     </div>
                 </div>
 
 
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-3 pb-3">
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Escoge los museos que quieres visitar</h6>
+                <h1>Genera tu Ruta</h1>
+                <button class="btn btn-outline-primary btn-small">Generar</button>
             </div>
         </div>
     </div>
@@ -317,7 +333,7 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+    <a class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 
     <!-- JavaScript Libraries -->
@@ -336,18 +352,32 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+         document.addEventListener("DOMContentLoaded", function() {
             var buttons = document.querySelectorAll(".toggle-btn");
+            var selectedMuseos = [];
+            
             buttons.forEach(function(button) {
                 button.addEventListener("click", function(event) {
                     event.preventDefault();
+                    var link = button.closest(".package-item").querySelector("a.h5");
+                    var value = link.getAttribute("value");
+
                     if (button.classList.contains("btn-active")) {
                         button.classList.remove("btn-active");
                         button.innerHTML = "+";
+                        // Remove the value from the array
+                        var index = selectedMuseos.indexOf(value);
+                        if (index > -1) {
+                            selectedMuseos.splice(index, 1);
+                        }
                     } else {
                         button.classList.add("btn-active");
                         button.innerHTML = "-";
+                        // Add the value to the array
+                        selectedMuseos.push(value);
                     }
+                    
+                    console.log(selectedMuseos); // Log the array to see the changes
                 });
             });
         });
