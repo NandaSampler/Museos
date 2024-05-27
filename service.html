@@ -24,6 +24,12 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        .btn-active {
+            background-color: rgba(122,183,48,255);
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
@@ -108,7 +114,7 @@
                         <img class="img-fluid" src="img/litoral.jpg" alt="">
                         <div class="p-4">
                             <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2" href="#">+</a></small>
+                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2 toggle-btn">+</a></small>
                             </div>
                             <a class="h5 text-decoration-none" href="">Museo del Litoral Boliviano</a>
                             <p class="m-0">Exposiciones sobre la Guerra con Chile y el papel de las mujeres.</p>
@@ -121,7 +127,7 @@
                         <img class="img-fluid" src="img/metales.jpeg" height="225px" width="1024px">
                         <div class="p-4">
                             <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2" href="#">+</a></small>
+                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2 toggle-btn">+</a></small>
                             </div>
                             <a class="h5 text-decoration-none" href="">Museo de Metales Preciosos y Precolombinos</a>
                             <p class="m-0">Exposición de piezas arqueológicas prehispánicas.</p>
@@ -134,7 +140,7 @@
                         <img class="img-fluid" src="img/casa.jpg" width="1024px">
                         <div class="p-4">
                             <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2" href="#">+</a></small>
+                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2 toggle-btn">+</a></small>
                             </div>
                             <a class="h5 text-decoration-none" href="">Museo Casa de Murillo</a>
                             <p class="m-0">Recorrido por la casa de Pedro Domingo Murillo y exposición de arte colonial.</p>
@@ -147,7 +153,7 @@
                         <img class="img-fluid" src="img/teatro.jpg" width="1024px">
                         <div class="p-4">
                             <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2" href="#">+</a></small>
+                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2 toggle-btn">+</a></small>
                             </div>
                             <a class="h5 text-decoration-none" href="">Teatro municipal "Alberto Saavedra Perez"</a>
                             <p class="m-0">Una noche especial con la Orquesta Sinfónica de la Universidad Loyola, Ballet de Chelita Urquidi, teatro y muestras en diferentes espacios.</p>
@@ -160,7 +166,7 @@
                         <img class="img-fluid" src="img/tribunal.jpg" width="1024px">
                         <div class="p-4">
                             <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2" href="#">+</a></small>
+                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2 toggle-btn">+</a></small>
                             </div>
                             <a class="h5 text-decoration-none" href="">Tribunal departamental de justicia la paz</a>
                             <p class="m-0">Recorrido por el Palacio de Justicia con historia breve de la justicia en La Paz.</p>
@@ -173,7 +179,7 @@
                         <img class="img-fluid" src="img/nacional.jpg" width="1024px">
                         <div class="p-4">
                             <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2" href="#">+</a></small>
+                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2 toggle-btn">+</a></small>
                             </div>
                             <a class="h5 text-decoration-none" href="">Museo nacional de etnografía y folklore (musef)</a>
                             <p class="m-0">Interacción educativa para niños con exposiciones permanentes, actividades lúdicas de retroalimentación, exposiciones fotográficas, muestras de máscaras, numismática boliviana, sonoridades musicales y vídeos del MUSEF. También se venden publicaciones y souvenirs.</p>
@@ -186,7 +192,7 @@
                         <img class="img-fluid" src="img/naci.jpeg" width="1024px">
                         <div class="p-4">
                             <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2" href="#">+</a></small>
+                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2 toggle-btn">+</a></small>
                             </div>
                             <a class="h5 text-decoration-none" href="">Museo nacional de arte (mna)</a>
                             <p class="m-0">El Museo Nacional de Arte exhibe la Bienal 'Creadoras: Mujeres Artistas en Bolivia' y exposiciones temporales sobre arte barroco andino, paisajes sagrados y la problemática de la violencia hacia las mujeres, con actividades culturales como teatro, mapping y danza urbana.</p>
@@ -199,7 +205,7 @@
                         <img class="img-fluid" src="img/poli.jpeg" alt="">
                         <div class="p-4">
                             <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2" href="#">+</a></small>
+                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2 toggle-btn">+</a></small>
                             </div>
                             <a class="h5 text-decoration-none" href="">Museo policial</a>
                             <p class="m-0">Exposiciones sobre temas del siglo XX como crimen, identificación, narcotráfico, Guerra del Chaco, bomberos, gorras, fototeca y criminología, junto con presentaciones de música y danza en el escenario.</p>
@@ -212,7 +218,7 @@
                         <img class="img-fluid" src="img/conser.jpg" width="1024px">
                         <div class="p-4">
                             <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2" href="#">+</a></small>
+                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2 toggle-btn">+</a></small>
                             </div>
                             <a class="h5 text-decoration-none" href="">Conservatorio plurinacional de música</a>
                             <p class="m-0">Evento musical con piano, coro juvenil, banda sinfónica, música programática, charla sobre música, música en guitarra, charla sobre Charly García, orquesta de guitarras y percusión sinfónica.</p>
@@ -225,7 +231,7 @@
                         <img class="img-fluid" src="img/footo.jpg" width="1024px">
                         <div class="p-4">
                             <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2" href="#">+</a></small>
+                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2 toggle-btn">+</a></small>
                             </div>
                             <a class="h5 text-decoration-none" href="">Foto espacio Bolivia</a>
                             <p class="m-0">Exposición de cámaras antiguas y analógicas desde 1987, muestra fotográfica "Bolivia de Luz" de distintos lugares, demostración de fotografía nocturna experimental con participantes y asistentes.</p>
@@ -329,6 +335,23 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var buttons = document.querySelectorAll(".toggle-btn");
+            buttons.forEach(function(button) {
+                button.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    if (button.classList.contains("btn-active")) {
+                        button.classList.remove("btn-active");
+                        button.innerHTML = "+";
+                    } else {
+                        button.classList.add("btn-active");
+                        button.innerHTML = "-";
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
