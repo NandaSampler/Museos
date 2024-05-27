@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>TRAVELER - Free Travel Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .btn-active {
+            background-color: rgba(122,183,48,255);
+            color: white;
+        }
+        .btn-small {
+            padding: 10px;
+            font-size: 24px;
+            line-height: 1.5;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light pt-3 d-none d-lg-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                        <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+                        <p class="text-body px-3">|</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>+012 345 6789</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center text-lg-right">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-primary px-3" href="">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-primary px-3" href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-primary px-3" href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="text-primary px-3" href="">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="text-primary pl-3" href="">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+            <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
+                <a class="navbar-brand">
+                    <h1 class="m-0 text-primary"><span class="text-dark">Larga noche de </span>Museos</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Inicio</a>
+                        <a href="about.html" class="nav-item nav-link">Planteamiento del problema</a>
+                        <a href="museos.html" class="nav-item nav-link active">Museos</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid page-header">
+        <div class="container">
+            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 500px">
+                <h3 class="display-4 text-white text-uppercase">Genera tu propia ruta!</h3>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-3 pb-3">
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Museos disponibles</h6>
+                <h1>Centro de la cuiudad</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid" src="img/litoral.jpg" alt="">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2 toggle-btn">+</a>
+                            </div>
+                            <a class="h5 text-decoration-none" value="Litoral">Museo del Litoral Boliviano</a>
+                            <p class="m-0">Exposiciones sobre la Guerra con Chile y el papel de las mujeres.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid" src="img/metales.jpeg" height="225px" width="1024px">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2 toggle-btn">+</a>
+                            </div>
+                            <a class="h5 text-decoration-none" value="Metales">Museo de Metales Preciosos y Precolombinos</a>
+                            <p class="m-0">Exposición de piezas arqueológicas prehispánicas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid" src="img/casa.jpg" width="1024px">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2 toggle-btn">+</a>
+                            </div>
+                            <a class="h5 text-decoration-none" value="Murillo">Museo Casa de Murillo</a>
+                            <p class="m-0">Recorrido por la casa de Pedro Domingo Murillo y exposición de arte colonial.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid" src="img/teatro.jpg" width="1024px">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2 toggle-btn">+</a>
+                            </div>
+                            <a class="h5 text-decoration-none" value="Teatro">Teatro municipal "Alberto Saavedra Perez"</a>
+                            <p class="m-0">Una noche especial con la Orquesta Sinfónica de la Universidad Loyola, Ballet de Chelita Urquidi, teatro y muestras en diferentes espacios.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid" src="img/tribunal.jpg" width="1024px">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2 toggle-btn">+</a>
+                            </div>
+                            <a class="h5 text-decoration-none" value="Tribunal">Tribunal departamental de justicia la paz</a>
+                            <p class="m-0">Recorrido por el Palacio de Justicia con historia breve de la justicia en La Paz.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid" src="img/nacional.jpg" width="1024px">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2 toggle-btn">+</a>
+                            </div>
+                            <a class="h5 text-decoration-none" value="Etno">Museo nacional de etnografía y folklore (musef)</a>
+                            <p class="m-0">Interacción educativa para niños con exposiciones permanentes, actividades lúdicas de retroalimentación, exposiciones fotográficas, muestras de máscaras, numismática boliviana, sonoridades musicales y vídeos del MUSEF. También se venden publicaciones y souvenirs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid" src="img/naci.jpeg" width="1024px">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2 toggle-btn">+</a>
+                            </div>
+                            <a class="h5 text-decoration-none" value="Arte">Museo nacional de arte (mna)</a>
+                            <p class="m-0">El Museo Nacional de Arte exhibe la Bienal 'Creadoras: Mujeres Artistas en Bolivia' y exposiciones temporales sobre arte barroco andino, paisajes sagrados y la problemática de la violencia hacia las mujeres, con actividades culturales como teatro, mapping y danza urbana.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid" src="img/poli.jpeg" alt="">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2 toggle-btn">+</a>
+                            </div>
+                            <a class="h5 text-decoration-none" value="Policial">Museo policial</a>
+                            <p class="m-0">Exposiciones sobre temas del siglo XX como crimen, identificación, narcotráfico, Guerra del Chaco, bomberos, gorras, fototeca y criminología, junto con presentaciones de música y danza en el escenario.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid" src="img/conser.jpg" width="1024px">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2 toggle-btn">+</a>
+                            </div>
+                            <a class="h5 text-decoration-none" value="Musica">Conservatorio plurinacional de música</a>
+                            <p class="m-0">Evento musical con piano, coro juvenil, banda sinfónica, música programática, charla sobre música, música en guitarra, charla sobre Charly García, orquesta de guitarras y percusión sinfónica.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid" src="img/footo.jpg" width="1024px">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"></small><a class="btn btn-outline-primary btn-square mr-2 toggle-btn">+</a>
+                            </div>
+                            <a class="h5 text-decoration-none" value="Foto">Foto espacio Bolivia</a>
+                            <p class="m-0">Exposición de cámaras antiguas y analógicas desde 1987, muestra fotográfica "Bolivia de Luz" de distintos lugares, demostración de fotografía nocturna experimental con participantes y asistentes.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-3 pb-3">
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Escoge los museos que quieres visitar</h6>
+                <h1>Genera tu Ruta</h1>
+                <button id="generate-route" class="btn btn-outline-primary btn-small">Generar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="" class="navbar-brand">
+                    <h1 class="text-primary"><span class="text-white">Larga noche <br>de museos</span></h1>
+                </a>
+                <p>Tu sitio confiable donde puedes organizar la noche mas hermosa de tu vida.</p>
+                <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Siguenos</h6>
+                <div class="d-flex justify-content-start">
+                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                
+                <div class="d-flex flex-column justify-content-start">
+                    <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Dominic Escalante</h5>
+                    
+                    <p><i class="fa fa-phone-alt mr-2"></i>+591 77217734</p>
+                    <p><i class="fa fa-envelope mr-2"></i>dominic.escalante@ucb.edu.bo</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Fernanda Mattos</h5>
+                
+                <p><i class="fa fa-phone-alt mr-2"></i>+591 77707560</p>
+                <p><i class="fa fa-envelope mr-2"></i>fernanda.mattos@ucb.edu.bo</p>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Jared Pimentel</h5>
+                
+                <p><i class="fa fa-phone-alt mr-2"></i>+512 76295137</p>
+                <p><i class="fa fa-envelope mr-2"></i>jared.pimentel@ucb.edu.bo</p>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Mateo Valenzuela</h5>
+                
+                <p><i class="fa fa-phone-alt mr-2"></i>+591 7056171390</p>
+                <p><i class="fa fa-envelope mr-2"></i>mateo.valenzuela@ucb.edu.bo</p>
+            </div>
+
+            <div class="col-lg-6 col-xl-3">
+                <div class="footer-item-1">
+                    <h4 class="mb-4 text-white">Universidad Catolica Boliviana "San Pablo"</h4>
+                    <p class="text-secondary line-h">Address: <span class="text-white">Av. 14 de Septiembre Nº 4807 esquina, La Paz</span></p>
+                    <p class="text-secondary line-h">Email: <span class="text-white">Example@ucb.edu.bo</span></p>
+                    <p class="text-secondary line-h">Telefono: <span class="text-white">+591 2 2782222</span></p>
+                    <div class="d-flex line-h">
+                        <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+         document.addEventListener("DOMContentLoaded", function() {
+    var buttons = document.querySelectorAll(".toggle-btn");
+    var selectedMuseos = [];
+    
+    buttons.forEach(function(button) {
+        button.addEventListener("click", function(event) {
+            event.preventDefault();
+            var link = button.closest(".package-item").querySelector("a.h5");
+            var value = link.getAttribute("value");
+
+            if (button.classList.contains("btn-active")) {
+                button.classList.remove("btn-active");
+                button.innerHTML = "+";
+                // Remove the value from the array
+                var index = selectedMuseos.indexOf(value);
+                if (index > -1) {
+                    selectedMuseos.splice(index, 1);
+                }
+            } else {
+                button.classList.add("btn-active");
+                button.innerHTML = "-";
+                // Add the value to the array
+                selectedMuseos.push(value);
+            }
+            
+            console.log(selectedMuseos); // Log the array to see the changes
+        });
+    });
+
+    document.getElementById("generate-route").addEventListener("click", function() {
+        const lugares = ["Litoral", "Metales", "Murillo", "Teatro", "Tribunal", "Etno", "Arte", "Policial", "Musica", "Foto"];
+        const matrizDistancias = [
+            [0, 12, 21, 270, 650, 400, 650, 900, 1700, 1300],
+            [12, 0, 9, 260, 650, 350, 600, 850, 1700, 1300],
+            [21, 9, 0, 250, 650, 350, 600, 850, 1700, 1400],
+            [270, 260, 250, 0, 350, 110, 350, 600, 1500, 1100],
+            [650, 650, 650, 350, 0, 260, 200, 450, 1100, 800],
+            [400, 350, 350, 110, 260, 0, 240, 500, 1300, 1000],
+            [650, 600, 600, 350, 200, 240, 0, 350, 1100, 750],
+            [900, 850, 850, 600, 450, 500, 350, 0, 850, 550],
+            [1700, 1700, 1700, 1500, 1100, 1300, 1100, 850, 0, 700],
+            [1300, 1300, 1400, 1100, 800, 1000, 750, 550, 700, 0]
+        ];
+        
+        let edges = [];
+        for (let i = 0; i < selectedMuseos.length; i++) {
+            for (let j = i + 1; j < selectedMuseos.length; j++) {
+                let idx1 = lugares.indexOf(selectedMuseos[i]);
+                let idx2 = lugares.indexOf(selectedMuseos[j]);
+                if (idx1 > -1 && idx2 > -1) {
+                    edges.push({
+                        source: selectedMuseos[i],
+                        target: selectedMuseos[j],
+                        weight: matrizDistancias[idx1][idx2]
+                    });
+                }
+            }
+        }
+
+        function find(parent, i) {
+            if (parent[i] === i) return i;
+            return find(parent, parent[i]);
+        }
+
+        function union(parent, rank, x, y) {
+            let rootX = find(parent, x);
+            let rootY = find(parent, y);
+
+            if (rank[rootX] < rank[rootY]) {
+                parent[rootX] = rootY;
+            } else if (rank[rootX] > rank[rootY]) {
+                parent[rootY] = rootX;
+            } else {
+                parent[rootY] = rootX;
+                rank[rootX]++;
+            }
+        }
+
+        function kruskal(edges) {
+            let parent = {};
+            let rank = {};
+            let mst = [];
+
+            selectedMuseos.forEach(v => {
+                parent[v] = v;
+                rank[v] = 0;
+            });
+
+            edges.sort((a, b) => a.weight - b.weight);
+
+            edges.forEach(edge => {
+                let {source, target, weight} = edge;
+                let rootSource = find(parent, source);
+                let rootTarget = find(parent, target);
+
+                if (rootSource !== rootTarget) {
+                    mst.push(edge);
+                    union(parent, rank, rootSource, rootTarget);
+                }
+            });
+
+            return mst;
+        }
+
+        let mst = kruskal(edges);
+
+        // Find Hamiltonian Path from MST
+        function findHamiltonianPath(mst) {
+            let adjList = {};
+            selectedMuseos.forEach(v => adjList[v] = []);
+            mst.forEach(edge => {
+                adjList[edge.source].push(edge.target);
+                adjList[edge.target].push(edge.source);
+            });
+
+            let startNode = selectedMuseos[0];
+            let visited = new Set();
+            let path = [];
+
+            function dfs(node) {
+                visited.add(node);
+                path.push(node);
+
+                for (let neighbor of adjList[node]) {
+                    if (!visited.has(neighbor)) {
+                        dfs(neighbor);
+                    }
+                }
+            }
+
+            dfs(startNode);
+            return path;
+        }
+
+        let hamiltonianPath = findHamiltonianPath(mst);
+        let totalWeight = 0;
+
+        for (let i = 0; i < hamiltonianPath.length - 1; i++) {
+            let idx1 = lugares.indexOf(hamiltonianPath[i]);
+            let idx2 = lugares.indexOf(hamiltonianPath[i + 1]);
+            totalWeight += matrizDistancias[idx1][idx2];
+        }
+
+        console.log("Suma de pesos total:", totalWeight);
+        console.log("Recorrido:", hamiltonianPath.join(" -> "));
+    });
+});
+
+    </script>
+</body>
+</html>
