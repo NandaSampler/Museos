@@ -89,7 +89,7 @@
                     <div class="navbar-nav ml-auto py-0">
                         <a href="index.html" class="nav-item nav-link">Inicio</a>
                         <a href="about.html" class="nav-item nav-link">Planteamiento del problema</a>
-                        <a href="service.html" class="nav-item nav-link active">Museos</a>
+                        <a href="museos.html" class="nav-item nav-link active">Museos</a>
                     </div>
                 </div>
             </nav>
@@ -255,7 +255,7 @@
             <div class="text-center mb-3 pb-3">
                 <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Escoge los museos que quieres visitar</h6>
                 <h1>Genera tu Ruta</h1>
-                <button class="btn btn-outline-primary btn-small">Generar</button>
+                <button id="generate-route" class="btn btn-outline-primary btn-small">Generar</button>
             </div>
         </div>
     </div>
@@ -380,8 +380,35 @@
                     console.log(selectedMuseos); // Log the array to see the changes
                 });
             });
+
+            document.getElementById("generate-route").addEventListener("click", function() {
+                const lugares = ["Litoral", "Metales", "Murillo", "Teatro", "Tribunal", "Etno", "Arte", "Policial", "Musica", "Foto"];
+                const matrizDistancias = [
+                    [0, 12, 21, 270, 650, 400, 650, 900, 1700, 1300],
+                    [12, 0, 9, 260, 650, 350, 600, 850, 1700, 1300],
+                    [21, 9, 0, 250, 650, 350, 600, 850, 1700, 1400],
+                    [270, 260, 250, 0, 350, 110, 350, 600, 1500, 1100],
+                    [650, 650, 650, 350, 0, 260, 200, 450, 1100, 800],
+                    [400, 350, 350, 110, 260, 0, 240, 500, 1300, 1000],
+                    [650, 600, 600, 350, 200, 240, 0, 350, 1100, 750],
+                    [900, 850, 850, 600, 450, 500, 350, 0, 850, 550],
+                    [1700, 1700, 1700, 1500, 1100, 1300, 1100, 850, 0, 700],
+                    [1300, 1300, 1400, 1100, 800, 1000, 750, 550, 700, 0]
+                ];
+                
+                let distancias = [];
+                for (let i = 0; i < selectedMuseos.length; i++) {
+                    for (let j = i + 1; j < selectedMuseos.length; j++) {
+                        let idx1 = lugares.indexOf(selectedMuseos[i]);
+                        let idx2 = lugares.indexOf(selectedMuseos[j]);
+                        if (idx1 > -1 && idx2 > -1) {
+                            distancias.push(matrizDistancias[idx1][idx2]);
+                        }
+                    }
+                }
+                console.log(distancias); // Log the distances to see the output
+            });
         });
     </script>
 </body>
-
 </html>
