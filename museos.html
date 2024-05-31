@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Museos</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="Free HTML Templates" name="keywords" />
+    <meta content="Free HTML Templates" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link
+      href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+      #lienzo {
+        width: 800px;
+        height: 600px;
+        border: none;
+        border-radius: 20px;
+        background-color: #ffffff;
+        margin-bottom: 20px;
+      }
+      .btn-active {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .btn-small {
+            padding: 10px;
+            font-size: 24px;
+            line-height: 1.5;
+            border-radius: 5px;
+        }
+
+        @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:700');
+
+        :root {
+            --font: 'Source Sans Pro', sans-serif;
+            --primary: #007bff;
+            --second: #644cad;
+            --third: #4426a8;
+        }
+
+        *,
+        *::before,
+        *::after {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .flex {
+            min-height: 15vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        a.bttn {
+            color: var(--primary);
+            text-decoration: none;
+            -webkit-transition: 0.3s all ease;
+            transition: 0.3s ease all;
+        }
+
+        a.bttn:hover,
+        a.bttn:focus {
+            color: #FFF;
+        }
+
+        .bttn {
+            font-size: 18px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            display: inline-block;
+            text-align: center;
+            width: 270px;
+            font-weight: bold;
+            padding: 14px 0px;
+            border: 3px solid var(--primary);
+            border-radius: 2px;
+            position: relative;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+            background: none;
+            color: var(--primary);
+            cursor: pointer;
+            -webkit-transition: 0.3s all ease;
+            transition: 0.3s ease all;
+        }
+
+        .bttn:before {
+            -webkit-transition: 0.5s all ease;
+            transition: 0.5s all ease;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            right: 50%;
+            bottom: 0;
+            opacity: 0;
+            content: '';
+            background-color: var(--primary);
+            z-index: -2;
+        }
+
+        .bttn:hover:before,
+        .bttn:focus:before {
+            left: 0;
+            right: 0;
+            opacity: 1;
+        }
+
+        .bttn:hover,
+        .bttn:focus {
+            color: #FFF;
+            /* Aquí se define el color de las letras en hover o focus */
+        }
+
+        #add-card-button {
+            font-size: 18px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            display: inline-block;
+            text-align: center;
+            width: 270px;
+            font-weight: bold;
+            padding: 14px 0px;
+            border: 3px solid var(--primary);
+            border-radius: 2px;
+            position: relative;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+            background: none;
+            color: var(--primary);
+            cursor: pointer;
+            -webkit-transition: 0.3s all ease;
+            transition: 0.3s ease all;
+        }
+
+        #add-card-button:before {
+            -webkit-transition: 0.5s all ease;
+            transition: 0.5s all ease;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            right: 50%;
+            bottom: 0;
+            opacity: 0;
+            content: '';
+            background-color: var(--primary);
+            z-index: -2;
+        }
+
+        #add-card-button:hover:before,
+        #add-card-button:focus:before {
+            left: 0;
+            right: 0;
+            opacity: 1;
+        }
+
+        #add-card-button:hover,
+        #add-card-button:focus {
+            color: #FFF;
+            /* Aquí se define el color de las letras en hover o focus */
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Open Sans", sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+            background: hsl(187 40% 98%);
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 1.4rem;
+        }
+
+        @media (min-width: 50em) {
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        .cta {
+            --shadowColor: 187 60% 40%;
+            display: flex;
+            flex-wrap: wrap;
+            background: hsl(187 70% 85%);
+            max-width: 50rem;
+            width: 100%;
+            box-shadow: 0.65rem 0.65rem 0 hsl(var(--shadowColor) / 1);
+            border-radius: 0.8rem;
+            overflow: hidden;
+            border: 0.5rem solid;
+            margin-bottom: 2rem;
+        }
+
+        .cta img {
+            aspect-ratio: 3 / 2;
+            object-fit: cover;
+            flex: 1 1 300px;
+            outline: 0.5rem solid;
+        }
+
+        .cta__text-column {
+            padding: min(2rem, 5vw) min(2rem, 5vw) min(2.5rem, 5vw);
+            flex: 1 0 50%;
+        }
+
+        .cta__text-column>*+* {
+            margin: min(1.5rem, 2.5vw) 0 0 0;
+        }
+
+        .cta a {
+            display: inline-block;
+            color: black;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            background: hsl(187 75% 64%);
+            border-radius: 0.6rem;
+            font-weight: 700;
+            border: 0.35rem solid;
+        }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+      <div
+        class="container-lg position-relative p-0 px-lg-3"
+        style="z-index: 9"
+      >
+        <nav
+          class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5"
+        >
+          <a class="navbar-brand">
+            <h1 class="m-0 text-primary">
+              <span class="text-dark">Larga noche de </span>Museos
+            </h1>
+          </a>
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-toggle="collapse"
+            data-target="#navbarCollapse"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-between px-3"
+            id="navbarCollapse"
+          >
+            <div class="navbar-nav ml-auto py-0">
+              <a href="index.html" class="nav-item nav-link">Inicio</a>
+              <a href="about.html" class="nav-item nav-link">Planteamiento del problema</a>
+              <a href="museos.html" class="nav-item nav-link active">Museos</a>
+              <a href="arbol.html" class="nav-item nav-link active">Algoritmo</a>
+
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Header Start -->
+    <div class="container-fluid page-header">
+      <div class="container">
+        <div
+          class="d-flex flex-column align-items-center justify-content-center"
+          style="min-height: 500px"
+        >
+          <h3 class="display-4 text-white text-uppercase">
+            Genera tu propia ruta!
+          </h3>
+        </div>
+      </div>
+    </div>
+    <!-- Header End -->
+
+    <div class="container-fluid py-5">
+      <div class="container pt-5 pb-3">
+        <div class="text-center mb-3 pb-3">
+          <h6 class="text-primary text-uppercase" style="letter-spacing: 5px">
+            Museos disponibles
+          </h6>
+          <h1>Centro de la cuiudad</h1>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="package-item bg-white mb-2">
+              <img class="img-fluid" src="img/litoral.jpg" alt="" />
+              <div class="p-4">
+                <div class="d-flex justify-content-between mb-3">
+                  <small class="m-0"></small
+                  ><a class="btn btn-outline-primary btn-square mr-2 toggle-btn"
+                    >+</a
+                  >
+                </div>
+                <a class="h5 text-decoration-none" value="Litoral"
+                  >Museo del Litoral Boliviano</a
+                >
+                <p class="m-0">
+                  Exposiciones sobre la Guerra con Chile y el papel de las
+                  mujeres.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="package-item bg-white mb-2">
+              <img
+                class="img-fluid"
+                src="img/metales.jpeg"
+                height="225px"
+                width="1024px"
+              />
+              <div class="p-4">
+                <div class="d-flex justify-content-between mb-3">
+                  <small class="m-0"></small
+                  ><a class="btn btn-outline-primary btn-square mr-2 toggle-btn"
+                    >+</a
+                  >
+                </div>
+                <a class="h5 text-decoration-none" value="Metales"
+                  >Museo de Metales Preciosos y Precolombinos</a
+                >
+                <p class="m-0">
+                  Exposición de piezas arqueológicas prehispánicas.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="package-item bg-white mb-2">
+              <img class="img-fluid" src="img/casa.jpg" width="1024px" />
+              <div class="p-4">
+                <div class="d-flex justify-content-between mb-3">
+                  <small class="m-0"></small
+                  ><a class="btn btn-outline-primary btn-square mr-2 toggle-btn"
+                    >+</a
+                  >
+                </div>
+                <a class="h5 text-decoration-none" value="Murillo"
+                  >Museo Casa de Murillo</a
+                >
+                <p class="m-0">
+                  Recorrido por la casa de Pedro Domingo Murillo y exposición de
+                  arte colonial.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="package-item bg-white mb-2">
+              <img class="img-fluid" src="img/teatro.jpg" width="1024px" />
+              <div class="p-4">
+                <div class="d-flex justify-content-between mb-3">
+                  <small class="m-0"></small
+                  ><a class="btn btn-outline-primary btn-square mr-2 toggle-btn"
+                    >+</a
+                  >
+                </div>
+                <a class="h5 text-decoration-none" value="Teatro"
+                  >Teatro municipal "Alberto Saavedra Perez"</a
+                >
+                <p class="m-0">
+                  Una noche especial con la Orquesta Sinfónica de la Universidad
+                  Loyola, Ballet de Chelita Urquidi, teatro y muestras en
+                  diferentes espacios.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="package-item bg-white mb-2">
+              <img class="img-fluid" src="img/tribunal.jpg" width="1024px" />
+              <div class="p-4">
+                <div class="d-flex justify-content-between mb-3">
+                  <small class="m-0"></small
+                  ><a class="btn btn-outline-primary btn-square mr-2 toggle-btn"
+                    >+</a
+                  >
+                </div>
+                <a class="h5 text-decoration-none" value="Tribunal"
+                  >Tribunal departamental de justicia la paz</a
+                >
+                <p class="m-0">
+                  Recorrido por el Palacio de Justicia con historia breve de la
+                  justicia en La Paz.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="package-item bg-white mb-2">
+              <img class="img-fluid" src="img/nacional.jpg" width="1024px" />
+              <div class="p-4">
+                <div class="d-flex justify-content-between mb-3">
+                  <small class="m-0"></small
+                  ><a class="btn btn-outline-primary btn-square mr-2 toggle-btn"
+                    >+</a
+                  >
+                </div>
+                <a class="h5 text-decoration-none" value="Etno"
+                  >Museo nacional de etnografía y folklore (musef)</a
+                >
+                <p class="m-0">
+                  Interacción educativa para niños con exposiciones permanentes,
+                  actividades lúdicas de retroalimentación, exposiciones
+                  fotográficas, muestras de máscaras, numismática boliviana,
+                  sonoridades musicales y vídeos del MUSEF. También se venden
+                  publicaciones y souvenirs.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="package-item bg-white mb-2">
+              <img class="img-fluid" src="img/naci.jpeg" width="1024px" />
+              <div class="p-4">
+                <div class="d-flex justify-content-between mb-3">
+                  <small class="m-0"></small
+                  ><a class="btn btn-outline-primary btn-square mr-2 toggle-btn"
+                    >+</a
+                  >
+                </div>
+                <a class="h5 text-decoration-none" value="Arte"
+                  >Museo nacional de arte (mna)</a
+                >
+                <p class="m-0">
+                  El Museo Nacional de Arte exhibe la Bienal 'Creadoras: Mujeres
+                  Artistas en Bolivia' y exposiciones temporales sobre arte
+                  barroco andino, paisajes sagrados y la problemática de la
+                  violencia hacia las mujeres, con actividades culturales como
+                  teatro, mapping y danza urbana.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="package-item bg-white mb-2">
+              <img class="img-fluid" src="img/poli.jpeg" alt="" />
+              <div class="p-4">
+                <div class="d-flex justify-content-between mb-3">
+                  <small class="m-0"></small
+                  ><a class="btn btn-outline-primary btn-square mr-2 toggle-btn"
+                    >+</a
+                  >
+                </div>
+                <a class="h5 text-decoration-none" value="Policial"
+                  >Museo policial</a
+                >
+                <p class="m-0">
+                  Exposiciones sobre temas del siglo XX como crimen,
+                  identificación, narcotráfico, Guerra del Chaco, bomberos,
+                  gorras, fototeca y criminología, junto con presentaciones de
+                  música y danza en el escenario.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="package-item bg-white mb-2">
+              <img class="img-fluid" src="img/conser.jpg" width="1024px" />
+              <div class="p-4">
+                <div class="d-flex justify-content-between mb-3">
+                  <small class="m-0"></small
+                  ><a class="btn btn-outline-primary btn-square mr-2 toggle-btn"
+                    >+</a
+                  >
+                </div>
+                <a class="h5 text-decoration-none" value="Musica"
+                  >Conservatorio plurinacional de música</a
+                >
+                <p class="m-0">
+                  Evento musical con piano, coro juvenil, banda sinfónica,
+                  música programática, charla sobre música, música en guitarra,
+                  charla sobre Charly García, orquesta de guitarras y percusión
+                  sinfónica.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="package-item bg-white mb-2">
+                <img class="img-fluid" src="img/fotoespacio.png" width="1024px">
+              <div class="p-4">
+                <div class="d-flex justify-content-between mb-3">
+                  <small class="m-0"></small
+                  ><a class="btn btn-outline-primary btn-square mr-2 toggle-btn"
+                    >+</a
+                  >
+                </div>
+                <a class="h5 text-decoration-none" value="Foto"
+                  >Foto espacio Bolivia</a
+                >
+                <p class="m-0">
+                  Exposición de cámaras antiguas y analógicas desde 1987,
+                  muestra fotográfica "Bolivia de Luz" de distintos lugares,
+                  demostración de fotografía nocturna experimental con
+                  participantes y asistentes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid py-5">
+      <div class="container pt-5 pb-3">
+        <div class="text-center mb-3 pb-3">
+          <h6 class="text-primary text-uppercase" style="letter-spacing: 5px">
+            Escoge los museos que quieres visitar
+          </h6>
+          <h1>Genera tu Ruta</h1>
+          <div class="flex">
+            <a id="generate-route" class="bttn">Generar Ruta</a>
+          </div>
+          <div class="row justify-content-center" id="dynamic-cards"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid py-5">
+      <div class="container pt-5 pb-3">
+        <div id="lienzo"></div>
+      </div>
+    </div>
+
+    <!-- Footer Start -->
+    <div
+      class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5"
+      style="margin-top: 90px"
+    >
+      <div class="row pt-5">
+        <div class="col-lg-3 col-md-6 mb-5">
+          <a href="" class="navbar-brand">
+            <h1 class="text-primary">
+              <span class="text-white">Larga noche <br />de museos</span>
+            </h1>
+          </a>
+          <p>
+            Tu sitio confiable donde puedes organizar la noche mas hermosa de tu
+            vida.
+          </p>
+          <h6
+            class="text-white text-uppercase mt-4 mb-3"
+            style="letter-spacing: 5px"
+          >
+            Siguenos
+          </h6>
+          <div class="d-flex justify-content-start">
+            <a class="btn btn-outline-primary btn-square mr-2" href="#"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a class="btn btn-outline-primary btn-square mr-2" href="#"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a class="btn btn-outline-primary btn-square mr-2" href="#"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a class="btn btn-outline-primary btn-square" href="#"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <div class="d-flex flex-column justify-content-start">
+            <h5
+              class="text-white text-uppercase mb-4"
+              style="letter-spacing: 5px"
+            >
+              Dominic Escalante
+            </h5>
+
+            <p><i class="fa fa-phone-alt mr-2"></i>+591 77217734</p>
+            <p>
+              <i class="fa fa-envelope mr-2"></i>dominic.escalante@ucb.edu.bo
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h5
+            class="text-white text-uppercase mb-4"
+            style="letter-spacing: 5px"
+          >
+            Fernanda Mattos
+          </h5>
+
+          <p><i class="fa fa-phone-alt mr-2"></i>+591 77707560</p>
+          <p><i class="fa fa-envelope mr-2"></i>fernanda.mattos@ucb.edu.bo</p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h5
+            class="text-white text-uppercase mb-4"
+            style="letter-spacing: 5px"
+          >
+            Jared Pimentel
+          </h5>
+
+          <p><i class="fa fa-phone-alt mr-2"></i>+512 76295137</p>
+          <p><i class="fa fa-envelope mr-2"></i>jared.pimentel@ucb.edu.bo</p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h5
+            class="text-white text-uppercase mb-4"
+            style="letter-spacing: 5px"
+          >
+            Mateo Valenzuela
+          </h5>
+
+          <p><i class="fa fa-phone-alt mr-2"></i>+591 7056171390</p>
+          <p><i class="fa fa-envelope mr-2"></i>mateo.valenzuela@ucb.edu.bo</p>
+        </div>
+
+        <div class="col-lg-6 col-xl-3">
+          <div class="footer-item-1">
+            <h4 class="mb-4 text-white">
+              Universidad Catolica Boliviana "San Pablo"
+            </h4>
+            <p class="text-secondary line-h">
+              Address:
+              <span class="text-white"
+                >Av. 14 de Septiembre Nº 4807 esquina, La Paz</span
+              >
+            </p>
+            <p class="text-secondary line-h">
+              Email: <span class="text-white">Example@ucb.edu.bo</span>
+            </p>
+            <p class="text-secondary line-h">
+              Telefono: <span class="text-white">+591 2 2782222</span>
+            </p>
+            <div class="d-flex line-h">
+              <a class="btn btn-outline-primary btn-square mr-2" href="#"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a class="btn btn-outline-primary btn-square mr-2" href="#"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a class="btn btn-outline-primary btn-square mr-2" href="#"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a class="btn btn-outline-primary btn-square" href="#"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a class="btn btn-lg btn-primary btn-lg-square back-to-top"
+      ><i class="fa fa-angle-double-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+      let map;
+      let markers = [];
+      let routeLine;
+      let hamiltonianPath;
+      const mapUrls = [
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.6754529260156!2d-68.13821109005163!3d-16.491963284184703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f2073361a2f91%3A0x637af2e522f6ccd3!2sMuseo%20del%20Litoral%20Boliviano!5e0!3m2!1ses-419!2sbo!4v1716812871682!5m2!1ses-419!2sbo",
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.673746928137!2d-68.13826779005169!3d-16.492049584184723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f2073482bf335%3A0x24a442c2befa3767!2sMuseo%20de%20Metales%20Preciosos%20Precolombinos!5e0!3m2!1ses-419!2sbo!4v1716812969348!5m2!1ses-419!2sbo",
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.671724627408!2d-68.13824599005173!3d-16.492151884184594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f207337e029d5%3A0x1d84b4ea4c3ff6ed!2sCasa%20de%20Murillo!5e0!3m2!1ses-419!2sbo!4v1716815274818!5m2!1ses-419!2sbo",
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.6425432296815!2d-68.13733009005169!3d-16.493627984183345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f20730ff10a31%3A0xa68785ee8e50a36f!2sTeatro%20Municipal%20Alberto%20Saavedra%20P%C3%A9rez!5e0!3m2!1ses-419!2sbo!4v1716815367293!5m2!1ses-419!2sbo",
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.601201370797!2d-68.1380195900516!3d-16.495718984181586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f2073f1aaaae9%3A0x6abb62c8aa70a27f!2sTribunal%20Departamental%20de%20Justicia%20de%20La%20Paz!5e0!3m2!1ses-419!2sbo!4v1716815436240!5m2!1ses-419!2sbo",
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.6269007496385!2d-68.13762549005149!3d-16.49441918418265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f2073a5f07245%3A0xe7056e6670b7e5d0!2sMuseo%20Nacional%20de%20Etnograf%C3%ADa%20y%20Folklore%20(MUSEF)!5e0!3m2!1ses-419!2sbo!4v1716815557210!5m2!1ses-419!2sbo",
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.5997658804413!2d-68.13689759005166!3d-16.4957915841815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915edf8977bba297%3A0xf7d1ea087813af63!2sMuseo%20Nacional%20de%20Arte!5e0!3m2!1ses-419!2sbo!4v1716815686706!5m2!1ses-419!2sbo",
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.573401988079!2d-68.13533709005145!3d-16.497124884180355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f207272e4544f%3A0x5afd86f004449833!2sDEJIPE%20Museo%20y%20Archivo%20Historico%20Policial!5e0!3m2!1ses-419!2sbo!4v1716815928016!5m2!1ses-419!2sbo",
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.470340881522!2d-68.13375119005138!3d-16.502335984176018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f206554c4763d%3A0xbd6e3dcf4801f7c7!2sConservatorio%20Plurinacional%20de%20M%C3%BAsica!5e0!3m2!1ses-419!2sbo!4v1716816020664!5m2!1ses-419!2sbo",
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.4988232521723!2d-68.13727659005133!3d-16.50089598417717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f2071d16063f9%3A0x65682b304a6203a5!2sFoto%20Espacio%20Bolivia!5e0!3m2!1ses-419!2sbo!4v1716816209519!5m2!1ses-419!2sbo",
+    ];
+
+      const imagenes = [
+        "img/litoral.jpg",
+        "https://pbs.twimg.com/media/CnfqHL1XEAAXwPc.jpg",
+        "img/casa.jpg",
+        "img/teatro.jpg",
+        "img/tribunal.jpg",
+        "img/nacional.jpg",
+        "img/naci.jpeg",
+        "img/poli.jpeg",
+        "img/conser.jpg",
+        "img/fotoespacio.png",
+      ];
+
+      const lugares = [
+        "Litoral",
+        "Metales",
+        "Murillo",
+        "Teatro",
+        "Tribunal",
+        "Etno",
+        "Arte",
+        "Policial",
+        "Musica",
+        "Foto",
+      ];
+
+      const horarios = [
+        "14:30-18:00",
+        "15:00-18:00",
+        "14:30-18:00",
+        "17:00-22:00",
+        "08:30-16:30",
+        "14:30-18:30",
+        "09:00-19:00",
+        "14:30-18:30",
+        "09:00-13:00",
+        "14:30-18:30",
+      ];
+
+      const direcciones = [
+        "Jaén 789, La Paz",
+        "Jaén 777, La Paz",
+        "Jaén 790, La Paz",
+        "Indaburo, La Paz",
+        "Potosi & Yanacocha, La Paz",
+        "Ingavi 916, La Paz",
+        "Socabaya, La Paz",
+        "Colón entre Comercio y, Villa Imperial de Potosí",
+        "Jaén 711, La Paz",
+        "Calle Murillo 1387 entre Almirante, La Paz",
+      ];
+
+      const descriptions = [
+        "El Museo Litoral Boliviano es un museo dedicado" +
+          "a la guerra del Pacífico, en la cual Bolivia perdió sus costas sobre el océano, y al héroe de esa guerra," +
+          "el Coronel Eduardo Abaroa. El Museo fue fundado el 17 de julio de 1978 y es parte de la red municipal de museos de La Paz.​​​​",
+
+        "El Museo de Metales Preciosos Precolombinos se encuentra localizado" +
+          "en la ciudad de La Paz, Bolivia. Este museo se inauguró en 1984.​Funciona en la calle Jaén," +
+          "en un inmueble histórico que es parte del patrimonio cultural boliviano, con categoría monumental.",
+
+        "El museo Casa de Murillo es una entidad cultural de la ciudad de La Paz en Bolivia, funciona en un inmueble catalogado " +
+          "como de valor monumental según la legislación sobre patrimonio cultural boliviano, " +
+          "la declaratoria de Monumento nacional corresponde a 1945. Posee igualmente una declaratoria de Patrimonio" +
+          "Arquitectónico de la ciudad de La Paz, extendida según ley Municipal Autonómica en 2012.1​",
+
+        "El Teatro Municipal «Alberto Saavedra Pérez»​ es el principal teatro de la ciudad de La Paz y " +
+          "escenario para la presentación de recitales y conciertos musicales, obras teatrales, ballet y opera, entre otros espectáculos culturales.",
+
+        "En fecha 15 de diciembre de 1825, el Libertador Simón Bolivar, promulgó el Decreto por " +
+          "el que se dispuso la creación de la Corte Superior de Justicia de La Paz, con las mismas atribuciones de las antiguas Audiencias " +
+          "y cuya jurisdicción territorial comprendia los departamentos de La Paz, Cochabamba e inclusive las provincias de Oruro, Paria y Carangas.",
+
+        "El Museo Nacional de Etnografía y Folklore (Musef) es uno de los principales centros de difusión de " +
+          "la etnografía de Bolivia. Los antecedentes previos a su fundación se remiten a la creación del Museo Nacional " +
+          "fundado en 1925, cuando nace el Departamento Científico de Etnografía como parte de los festejos del Centenario de Bolivia.",
+
+        "El Museo Nacional de Arte, Palacio Díez de Medina es un museo de la ciudad de La Paz, Bolivia. " +
+          "El mismo cuenta con una importante colección permanente de pintura colonial, lienzos de Melchor Pérez de Holguín, " +
+          "pintor del siglo XVII, y de Gregorio Gamarra, pintor peruano del siglo XVII.",
+
+        "El Museo Policial de Bolivia, fue fundado por el Cnl. Alberto Mariño Guzmán y Víctor Manuel del Castillo el año 1942, " +
+          "en los predios de la División de Criminalística ubicada en la calle Ballivián – actual Tribunal Permanente de " +
+          "Justicia Militar -. Siendo trasladado el Museo a una dependencia de la Prefectura del Departamento de La Paz , " +
+          "el año 1942, Posteriormente funcionó hasta año 1976 en el Regimiento La Paz, hoy Distrito Policial N. 1 de la zona de San Pedro de la ciudad de La Paz.",
+
+        "Pequeño museo en el que se exhibe una colección de instrumentos musicales de todo el mundo.",
+
+        "Exposición de cámaras antiguas y analógicas desde 1987, muestra fotográfica " +
+          "Bolivia de Luz de distintos lugares, demostración de fotografía nocturna experimental con participantes y asistentes.",
+      ];
+      const matrizDistancias = [
+        [0, 12, 21, 270, 650, 400, 650, 900, 1700, 1300],
+        [12, 0, 9, 260, 650, 350, 600, 850, 1700, 1300],
+        [21, 9, 0, 250, 650, 350, 600, 850, 1700, 1400],
+        [270, 260, 250, 0, 350, 110, 350, 600, 1500, 1100],
+        [650, 650, 650, 350, 0, 260, 200, 450, 1100, 800],
+        [400, 350, 350, 110, 260, 0, 240, 500, 1300, 1000],
+        [650, 600, 600, 350, 200, 240, 0, 350, 1100, 750],
+        [900, 850, 850, 600, 450, 500, 350, 0, 850, 550],
+        [1700, 1700, 1700, 1500, 1100, 1300, 1100, 850, 0, 700],
+        [1300, 1300, 1400, 1100, 800, 1000, 750, 550, 700, 0],
+      ];
+      const museumLocations = {
+        "Litoral": [-16.4919350, -68.1356840],
+        "Metales": [-16.4920097, -68.1357623],
+        "Murillo": [-16.4920913, -68.1356970],
+        "Teatro": [-16.49356,-68.13497],
+        "Tribunal": [-16.49473,-68.13485],
+        "Etno": [-16.49449,-68.13518],
+        "Arte": [-16.4958355, -68.1342924],
+        "Policial": [-16.4970885, -68.1328719],
+        "Musica": [-16.5023415, -68.1311299],
+        "Foto": [-16.5008861, -68.1345695]
+      };
+      // Contador para las tarjetas creadas
+      let poslugar = -1;
+      let cardCount = 0;
+
+      // Obtén el contenedor dinámico de las tarjetas
+      const dynamicCardsContainer = document.getElementById("dynamic-cards");
+
+      // Función para crear una nueva tarjeta
+      function createCard(pos, distancia) {
+        // Crear un contenedor para una nueva fila
+        const rowContainer = document.createElement("div");
+        rowContainer.className = "row";
+
+        // Crear la primera tarjeta con título dinámico
+        const cardElement1 = document.createElement("div");
+        cardElement1.className = "col-lg-6 col-md-12 mb-4";
+        cardElement1.innerHTML = `
+        <article class="cta">
+            <img src='${imagenes[pos]}' alt='Bluetit'>
+            <div class="cta__text-column">
+                <h2>${cardCount + 1}ª parada: ${lugares[pos]}</h2>
+                <p>${descriptions[pos]}</p>
+                <p>${"Distancia hacia el museo: " + distancia + " Mts."}</p>
+            </div>
+        </article>
+    `;
+
+        // Crear la segunda tarjeta con el iframe de Google Maps
+        const cardElement2 = document.createElement("div");
+        cardElement2.className = "col-lg-6 col-md-12 mb-4";
+        cardElement2.innerHTML = `
+        <article class="cta">
+            <iframe src="${
+              mapUrls[pos]
+            }" width="100%" height="300" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="cta__text-column">
+                <h2>Dirección y Horarios</h2>
+                <p>${"Dirección: " + direcciones[pos]}</p>
+                <p>${"Horarios: " + horarios[pos]}</p>
+            </div>
+        </article>
+    `;
+
+        // Añadir las tarjetas al contenedor de la fila
+        rowContainer.appendChild(cardElement1);
+        rowContainer.appendChild(cardElement2);
+
+        // Añadir el contenedor de la fila al contenedor principal
+        dynamicCardsContainer.appendChild(rowContainer);
+        cardCount += 1;
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        map = L.map('lienzo').setView([-16.4955,-68.1336], 50);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var buttons = document.querySelectorAll(".toggle-btn");
+        var selectedMuseos = [];
+
+        buttons.forEach(function (button) {
+          button.addEventListener("click", function (event) {
+            event.preventDefault();
+            var link = button.closest(".package-item").querySelector("a.h5");
+            var value = link.getAttribute("value");
+
+            if (button.classList.contains("btn-active")) {
+              button.classList.remove("btn-active");
+              button.innerHTML = "+";
+              // Remove the value from the array
+              var index = selectedMuseos.indexOf(value);
+              if (index > -1) {
+                selectedMuseos.splice(index, 1);
+              }
+            } else {
+              button.classList.add("btn-active");
+              button.innerHTML = "-";
+              // Add the value to the array
+              selectedMuseos.push(value);
+            }
+
+            console.log(selectedMuseos); // Log the array to see the changes
+          });
+        });
+
+        document
+          .getElementById("generate-route")
+          .addEventListener("click", function () {
+            const lugares = [
+              "Litoral",
+              "Metales",
+              "Murillo",
+              "Teatro",
+              "Tribunal",
+              "Etno",
+              "Arte",
+              "Policial",
+              "Musica",
+              "Foto",
+            ];
+            const matrizDistancias = [
+              [0, 12, 21, 270, 650, 400, 650, 900, 1700, 1300],
+              [12, 0, 9, 260, 650, 350, 600, 850, 1700, 1300],
+              [21, 9, 0, 250, 650, 350, 600, 850, 1700, 1400],
+              [270, 260, 250, 0, 350, 110, 350, 600, 1500, 1100],
+              [650, 650, 650, 350, 0, 260, 200, 450, 1100, 800],
+              [400, 350, 350, 110, 260, 0, 240, 500, 1300, 1000],
+              [650, 600, 600, 350, 200, 240, 0, 350, 1100, 750],
+              [900, 850, 850, 600, 450, 500, 350, 0, 850, 550],
+              [1700, 1700, 1700, 1500, 1100, 1300, 1100, 850, 0, 700],
+              [1300, 1300, 1400, 1100, 800, 1000, 750, 550, 700, 0],
+            ];
+
+            let edges = [];
+            for (let i = 0; i < selectedMuseos.length; i++) {
+              for (let j = i + 1; j < selectedMuseos.length; j++) {
+                let idx1 = lugares.indexOf(selectedMuseos[i]);
+                let idx2 = lugares.indexOf(selectedMuseos[j]);
+                if (idx1 > -1 && idx2 > -1) {
+                  edges.push({
+                    source: selectedMuseos[i],
+                    target: selectedMuseos[j],
+                    weight: matrizDistancias[idx1][idx2],
+                  });
+                }
+              }
+            }
+
+            function find(parent, i) {
+              if (parent[i] === i) return i;
+              return find(parent, parent[i]);
+            }
+
+            function union(parent, rank, x, y) {
+              let rootX = find(parent, x);
+              let rootY = find(parent, y);
+
+              if (rank[rootX] < rank[rootY]) {
+                parent[rootX] = rootY;
+              } else if (rank[rootX] > rank[rootY]) {
+                parent[rootY] = rootX;
+              } else {
+                parent[rootY] = rootX;
+                rank[rootX]++;
+              }
+            }
+
+            function kruskal(edges) {
+              let parent = {};
+              let rank = {};
+              let mst = [];
+
+              selectedMuseos.forEach((v) => {
+                parent[v] = v;
+                rank[v] = 0;
+              });
+
+              edges.sort((a, b) => a.weight - b.weight);
+
+              edges.forEach((edge) => {
+                let { source, target, weight } = edge;
+                let rootSource = find(parent, source);
+                let rootTarget = find(parent, target);
+
+                if (rootSource !== rootTarget) {
+                  mst.push(edge);
+                  union(parent, rank, rootSource, rootTarget);
+                }
+              });
+
+              return mst;
+            }
+
+            let mst = kruskal(edges);
+
+            // Find Hamiltonian Path from MST
+            function findHamiltonianPath(mst) {
+              let adjList = {};
+              selectedMuseos.forEach((v) => (adjList[v] = []));
+              mst.forEach((edge) => {
+                adjList[edge.source].push(edge.target);
+                adjList[edge.target].push(edge.source);
+              });
+
+              let startNode = selectedMuseos[0];
+              let visited = new Set();
+              let path = [];
+
+              function dfs(node) {
+                visited.add(node);
+                path.push(node);
+
+                for (let neighbor of adjList[node]) {
+                  if (!visited.has(neighbor)) {
+                    dfs(neighbor);
+                  }
+                }
+              }
+
+              dfs(startNode);
+              return path;
+            }
+
+            hamiltonianPath = findHamiltonianPath(mst);
+            let totalWeight = 0;
+
+            for (let i = 0; i < hamiltonianPath.length - 1; i++) {
+              let idx1 = lugares.indexOf(hamiltonianPath[i]);
+              let idx2 = lugares.indexOf(hamiltonianPath[i + 1]);
+              totalWeight += matrizDistancias[idx1][idx2];
+            }
+
+            console.log("Suma de pesos total:", totalWeight);
+            console.log("Recorrido:", hamiltonianPath.join(" -> "));
+
+            if (hamiltonianPath && hamiltonianPath.length > 0) {
+              generarRutaCards();
+            } else {
+              console.error("Hamiltonian path is undefined or empty");
+            }
+          });
+      });
+
+      function generarRutaCards() {
+        cardCount = 0;
+        dynamicCardsContainer.innerHTML = ""; // Limpia las tarjetas anteriores
+
+        markers.forEach(marker => map.removeLayer(marker));
+        markers = [];
+        if (routeLine) {
+          map.removeLayer(routeLine);
+        }
+
+        let routeCoordinates = [];
+
+        for (let i = 0; i < hamiltonianPath.length; i++) {
+          const lugarIndex = lugares.indexOf(hamiltonianPath[i]);
+          const nextLugarIndex = lugares.indexOf(hamiltonianPath[i + 1]);
+
+          if (i === 0) {
+            createCard(lugarIndex, 0);
+          } else if (lugarIndex !== -1 && nextLugarIndex !== -1) {
+            createCard(
+              lugarIndex,
+              matrizDistancias[lugarIndex][nextLugarIndex]
+            );
+          } else if (i === hamiltonianPath.length - 1) {
+            createCard(lugarIndex, 100);
+          }
+
+          if (museumLocations[hamiltonianPath[i]]) {
+            let coords = museumLocations[hamiltonianPath[i]];
+            if (coords && coords.length === 2) {
+              let marker = L.marker(coords).addTo(map)
+                .bindPopup(hamiltonianPath[i])
+                .openPopup();
+              markers.push(marker);
+              routeCoordinates.push(coords);
+            } else {
+              console.error(`Coordinates for ${hamiltonianPath[i]} are invalid.`);
+            }
+          } else {
+            console.error(`No location found for ${hamiltonianPath[i]}.`);
+          }
+        }
+
+        if (routeCoordinates.length > 1) {
+          routeLine = L.polyline(routeCoordinates, { color: 'blue' }).addTo(map);
+        }
+
+        if (markers.length > 0) {
+          map.fitBounds(markers.map(marker => marker.getLatLng()));
+        }
+      }
+    </script>
+  </body>
+</html>
